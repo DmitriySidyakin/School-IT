@@ -39,6 +39,7 @@ Console.WriteLine("Привет, Мир!");
 ## Контекстные ключевые слова
 
 | a-f | g-n | n-s | s-y |
+| --- | --- | --- | --- |
 | add | get | notnull | set |
 | and | global | nuint | unmanaged (соглашение о вызовах указателей функций) |
 | alias | group | on | unmanaged (ограничение универсального типа) |
