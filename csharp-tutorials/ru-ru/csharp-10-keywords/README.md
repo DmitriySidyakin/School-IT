@@ -12,6 +12,7 @@ Console.WriteLine("Привет, Мир!");
 ```
 
 ## Список ключевых слов
+
 | a-e | e-l | n-s | s-w |
 | --- | --- | --- | --- |
 | abstract | event | namespace | static |
@@ -34,6 +35,28 @@ Console.WriteLine("Привет, Мир!");
 | double | lock | sizeof | volatile |
 | else | long | stackalloc | while |
 | enum |  |  |  | 
+
+## Контекстные ключевые слова
+
+| a-f | g-n | n-s | s-y |
+| add | get | notnull | set |
+| and | global | nuint | unmanaged (соглашение о вызовах указателей функций) |
+| alias | group | on | unmanaged (ограничение универсального типа) |
+| ascending | init | or | value |
+| args | into | orderby | var |
+| async | join | partial (тип) | when (условие фильтра) |
+| await | let |  partial (метод) | where (ограничение универсального типа) |
+| by | managed (соглашение о вызовах указателей функций) | record | where (предложение запроса) |
+| descending | nameof | remove | with |
+| dynamic | nint | select | yield |
+| equals | not (не) |  |  | 
+| from |  |  |  | 
+
+
+
+
+
+
 
 
 
