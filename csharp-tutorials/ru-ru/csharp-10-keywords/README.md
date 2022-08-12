@@ -11,37 +11,53 @@ Console.WriteLine("Привет, Мир!");
 Она подойдёт, как справочник по ключевым словам C# 10, как начинающим специалистам, так и опытным для повторения
 ```
 
+## Список ключевых слов
+| a-e | e-l | n-s | s-w |
+| --- | --- | --- | --- |
+| abstract | event | namespace | static |
+| as | explicit | new | string |
+| base | extern | null | struct |
+| bool | false | object | switch |
+| break | finally | operator | this |
+| byte | fixed | out | throw |
+| case | float | override | true |
+| catch | for | params | try |
+| char | foreach | private | typeof |
+| checked | goto | protected | uint |
+| class | if | public | ulong |
+| const | implicit | readonly | unchecked |
+| continue | in | ref | unsafe |
+| decimal | int | return | ushort |
+| default | interface | sbyte | using |
+| delegate | internal | sealed | virtual |
+| do | is | short | void  |
+| double | lock | sizeof | volatile |
+| else | long | stackalloc | while |
+| enum |  |  |  | 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 [in in](https://github.com/DmitriySidyakin/CSharp-Tutorials/blob/csharp-keywords-06-2022/csharp-tutorials/ru-ru/csharp-10-keywords/README.md#in-in)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## in in
 
