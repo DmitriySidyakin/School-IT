@@ -17,26 +17,26 @@ C\# 10 поддерживает платформа .NET 6.
 
 | a-e | e-l | n-s | s-w |
 | --- | --- | --- | --- |
-| [abstract](#abstract) | [event](#) | [namespace](#) | [static](#) |
-| [as](#) | [explicit](#) | [new](#) | [string](#) |
-| [base](#) | [extern](#) | [null](#) | [struct](#) |
-| [bool](#) | [false](#) | [object](#) | [switch](#) |
-| [break](#) | [finally](#) | [operator](#) | [this](#) |
-| [byte](#) | [fixed](#) | [out](#) | [throw](#) |
-| [case](#) | [float](#) | [override](#) | [true](#) |
-| [catch](#) | [for](#) | [params](#) | [try](#) |
-| [char](#) | [foreach](#) | [private](#) | [typeof](#) |
-| [checked](#) | [goto](#) | [protected](#) | [uint](#) |
-| [class](#) | [if](#) | [public](#) | [ulong](#) |
-| [const](#) | [implicit](#) | [readonly](#) | [unchecked](#) |
-| [continue](#) | [in](#) | [ref](#) | [unsafe](#) |
-| [decimal](#) | [int](#) | [return](#) | [ushort](#) |
-| [default](#) | [interface](#) | [sbyte](#) | [using](#) |
-| [delegate](#) | [internal](#) | [sealed](#) | [virtual](#) |
-| [do](#) | [is](#) | [short](#) | [void](#)  |
-| [double](#) | [lock](#) | [sizeof](#) | [volatile](#) |
-| [else](#) | [long](#) | [stackalloc](#) | [while](#) |
-| [enum](#) |  |  |  | 
+| [abstract](#abstract) | [event](#event) | [namespace](#namespace) | [static](#static) |
+| [as](#as) | [explicit](#explicit) | [new](#new) | [string](#string) |
+| [base](#base) | [extern](#extern) | [null](#null) | [struct](#struct) |
+| [bool](#bool) | [false](#false) | [object](#object) | [switch](#switch) |
+| [break](#break) | [finally](#finally) | [operator](#operator) | [this](#this) |
+| [byte](#byte) | [fixed](#fixed) | [out](#out) | [throw](#throw) |
+| [case](#case) | [float](#float) | [override](#override) | [true](#true) |
+| [catch](#catch) | [for](#for) | [params](#params) | [try](#try) |
+| [char](#char) | [foreach](#foreach) | [private](#private) | [typeof](#typeof) |
+| [checked](#checked) | [goto](#goto) | [protected](#protected) | [uint](#uint) |
+| [class](#class) | [if](#if) | [public](#public) | [ulong](#ulong) |
+| [const](#const) | [implicit](#implicit) | [readonly](#readonly) | [unchecked](#unchecked) |
+| [continue](#continue) | [in](#in) | [ref](#ref) | [unsafe](#unsafe) |
+| [decimal](#decimal) | [int](#int) | [return](#return) | [ushort](#ushort) |
+| [default](#default) | [interface](#interface) | [sbyte](#sbyte) | [using](#using) |
+| [delegate](#delegate) | [internal](#internal) | [sealed](#sealed) | [virtual](#virtual) |
+| [do](#do) | [is](#is) | [short](#short) | [void](#void)  |
+| [double](#double) | [lock](#lock) | [sizeof](#sizeof) | [volatile](#volatile) |
+| [else](#else) | [long](#long) | [stackalloc](#stackalloc) | [while](#while) |
+| [enum](#enum) |  |  |  | 
 
 ## Контекстные ключевые слова
 
@@ -300,28 +300,4 @@ C\# 10 поддерживает платформа .NET 6.
 
 ### yield
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[in in](https://github.com/DmitriySidyakin/CSharp-Tutorials/blob/csharp-keywords-06-2022/csharp-tutorials/ru-ru/csharp-10-keywords/README.md#in-in)
-
-## in in
 
