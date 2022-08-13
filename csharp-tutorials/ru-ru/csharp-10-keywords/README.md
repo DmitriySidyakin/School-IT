@@ -42,18 +42,18 @@ C\# 10 поддерживает платформа .NET 6.
 
 | a-f | g-n | n-s | s-y |
 | --- | --- | --- | --- |
-| [add](#) | [get](#) | [notnull](#) | [set](#) |
-| [and](#) | [global](#) | [nuint](#) | [unmanaged (соглашение о вызовах указателей функций)](#managed-соглашение-о-вызовах-указателей-функций) |
-| [alias](#) | [group](#) | [on](#) | [unmanaged (ограничение универсального типа)](#) |
-| [ascending](#) | [init](#) | [or](#) | [value](#) |
-| [args](#) | [into](#) | [orderby](#) | [var](#) |
-| [async](#) | [join](#) | [partial (тип)](#) | [when (условие фильтра)](#) |
-| [await](#) | [let](#) |  [partial (метод)](#) | [where (ограничение универсального типа)](#) |
-| [by](#) | [managed (соглашение о вызовах указателей функций)](#) | [record](#) | [where (предложение запроса)](#) |
-| [descending](#) | [nameof](#) | [remove](#) | [with](#) |
-| [dynamic](#) | [nint](#) | [select](#) | [yield](#) |
-| [equals](#) | [not (не)](#) |  |  | 
-| [from](#) |  |  |  | 
+| [add](#add) | [get](#get) | [notnull](#notnull) | [set](#set) |
+| [and](#and) | [global](#global) | [nuint](#nuint) | [unmanaged (соглашение о вызовах указателей функций)](#managed-соглашение-о-вызовах-указателей-функций) |
+| [alias](#alias) | [group](#group) | [on](#on) | [unmanaged (ограничение универсального типа)](#unmanaged-ограничение-универсального-типа)) |
+| [ascending](#ascending) | [init](#init) | [or](#or) | [value](#value) |
+| [args](#args) | [into](#into) | [orderby](#orderby) | [var](#var) |
+| [async](#async) | [join](#join) | [partial (тип)](#partial-тип) | [when (условие фильтра)](#when-условие-фильтра) |
+| [await](#await) | [let](#let) |  [partial (метод)](#partial-метод) | [where (ограничение универсального типа)](#where-ограничение-универсального-типа) |
+| [by](#by) | [managed (соглашение о вызовах указателей функций)](#managed-соглашение-о-вызовах-указателей-функций) | [record](#record) | [where (предложение запроса)](#where-предложение-запроса) |
+| [descending](#descending) | [nameof](#nameof) | [remove](#remove) | [with](#with) |
+| [dynamic](#dynamic) | [nint](#nint) | [select](#select) | [yield](#yield) |
+| [equals](#equals) | [not (не)](#not-не) |  |  | 
+| [from](#from) |  |  |  | 
 
 
 ## Список ключевых слов. Описание и примеры
