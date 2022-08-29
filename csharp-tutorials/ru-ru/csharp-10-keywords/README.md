@@ -91,208 +91,208 @@ C\# 10 поддерживает платформа .NET 6.
 [Документация Microsoft - char](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/char)
 
 ### checked
-[Документация Microsoft - checked]()
+[Документация Microsoft - checked](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/checked)
 
 ### class
-[Документация Microsoft - class]()
+[Документация Microsoft - class](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/class)
 
 ### const
-[Документация Microsoft - const]()
+[Документация Microsoft - const](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/const)
 
 ### continue
-[Документация Microsoft - continue]()
+[Документация Microsoft - continue](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/statements/jump-statements#the-continue-statement)
 
 ### decimal
-[Документация Microsoft - decimal]()
+[Документация Microsoft - decimal](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types)
 
 ### default
-[Документация Microsoft - default]()
+[Документация Microsoft - default](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/default)
 
 ### delegate
-[Документация Microsoft - delegate]()
+[Документация Microsoft - delegate](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/reference-types)
 
 ### do
-[Документация Microsoft - do]()
+[Документация Microsoft - do](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/statements/iteration-statements#the-do-statement)
 
 ### double
-[Документация Microsoft - double]()
+[Документация Microsoft - double](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types)
 
 ### else
-[Документация Microsoft - else]()
+[Документация Microsoft - else](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/statements/selection-statements#the-if-statement)
 
 ### enum
-[Документация Microsoft - enum]()
+[Документация Microsoft - enum](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/enum)
 
 ### event
-[Документация Microsoft - event]()
+[Документация Microsoft - event](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/event)
 
 ### explicit
-[Документация Microsoft - explicit]()
+[Документация Microsoft - explicit](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/user-defined-conversion-operators)
 
 ### extern
-[Документация Microsoft - extern]()
+[Документация Microsoft - extern](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/extern)
 
 ### false
-[Документация Microsoft - false]()
+[Документация Microsoft - false](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/bool)
 
 ### finally
-[Документация Microsoft - finally]()
+[Документация Microsoft - finally](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/try-finally)
 
 ### fixed
-[Документация Microsoft - fixed]()
+[Документация Microsoft - fixed](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/fixed-statement)
 
 ### float
-[Документация Microsoft - float]()
+[Документация Microsoft - float](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types)
 
 ### for
-[Документация Microsoft - for]()
+[Документация Microsoft - for](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/statements/iteration-statements#the-for-statement)
 
 ### foreach
-[Документация Microsoft - foreach]()
+[Документация Microsoft - foreach](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/statements/iteration-statements#the-foreach-statement)
 
 ### goto
-[Документация Microsoft - goto]()
+[Документация Microsoft - goto](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/statements/jump-statements#the-goto-statement)
 
 ### if
-[Документация Microsoft - if]()
+[Документация Microsoft - if](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/statements/selection-statements#the-if-statement)
 
 ### implicit
-[Документация Microsoft - implicit]()
+[Документация Microsoft - implicit](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/user-defined-conversion-operators)
 
 ### in
-[Документация Microsoft - in]()
+[Документация Microsoft - in](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/in)
 
 ### int
-[Документация Microsoft - int]()
+[Документация Microsoft - int](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/integral-numeric-types)
 
 ### interface
-[Документация Microsoft - interface]()
+[Документация Microsoft - interface](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/interface)
 
 ### internal
-[Документация Microsoft - internal]()
+[Документация Microsoft - internal](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/internal)
 
 ### is
-[Документация Microsoft - is]()
+[Документация Microsoft - is](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/is)
 
 ### lock
-[Документация Microsoft - lock]()
+[Документация Microsoft - lock](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/statements/lock)
 
 ### long
-[Документация Microsoft - long]()
+[Документация Microsoft - long](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/integral-numeric-types)
 
 ### namespace
-[Документация Microsoft - namespace]()
+[Документация Microsoft - namespace](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/namespace)
 
 ### new
-[Документация Microsoft - new]()
+[Документация Microsoft - new](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/new-operator)
 
 ### null
-[Документация Microsoft - null]()
+[Документация Microsoft - null](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/null)
 
 ### object
-[Документация Microsoft - object]()
+[Документация Microsoft - object](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/reference-types)
 
 ### operator
-[Документация Microsoft - operator]()
+[Документация Microsoft - operator](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/operator-overloading)
 
 ### out
-[Документация Microsoft - out]()
+[Документация Microsoft - out](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/out)
 
 ### override
-[Документация Microsoft - override]()
+[Документация Microsoft - override](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/override)
 
 ### params
-[Документация Microsoft - params]()
+[Документация Microsoft - params](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/params)
 
 ### private
-[Документация Microsoft - private]()
+[Документация Microsoft - private](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/private)
 
 ### protected
-[Документация Microsoft - protected]()
+[Документация Microsoft - protected](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/protected)
 
 ### public
-[Документация Microsoft - public]()
+[Документация Microsoft - public](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/public)
 
 ### readonly
-[Документация Microsoft - readonly]()
+[Документация Microsoft - readonly](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/readonly)
 
 ### ref
-[Документация Microsoft - ref]()
+[Документация Microsoft - ref](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/ref)
 
 ### return
-[Документация Microsoft - return]()
+[Документация Microsoft - return](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/statements/jump-statements#the-return-statement)
 
 ### sbyte
-[Документация Microsoft - sbyte]()
+[Документация Microsoft - sbyte](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/integral-numeric-types)
 
 ### sealed
-[Документация Microsoft - sealed]()
+[Документация Microsoft - sealed](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/sealed)
 
 ### short
-[Документация Microsoft - short]()
+[Документация Microsoft - short](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/sizeof)
 
 ### sizeof
-[Документация Microsoft - sizeof]()
+[Документация Microsoft - sizeof](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/sizeof)
 
 ### stackalloc
-[Документация Microsoft - stackalloc]()
+[Документация Microsoft - stackalloc](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/stackalloc)
 
 ### static
-[Документация Microsoft - static]()
+[Документация Microsoft - static](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/static)
 
 ### string
-[Документация Microsoft - string]()
+[Документация Microsoft - string](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/reference-types)
 
 ### struct
-[Документация Microsoft - struct]()
+[Документация Microsoft - struct](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/struct)
 
 ### switch
-[Документация Microsoft - switch]()
+[Документация Microsoft - switch](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/switch-expression)
 
 ### this
-[Документация Microsoft - this]()
+[Документация Microsoft - this](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/this)
 
 ### throw
-[Документация Microsoft - throw]()
+[Документация Microsoft - throw](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/throw)
 
 ### true
-[Документация Microsoft - true]()
+[Документация Microsoft - true](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/bool)
 
 ### try
-[Документация Microsoft - try]()
+[Документация Microsoft - try](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/try-catch)
 
 ### typeof
-[Документация Microsoft - typeof]()
+[Документация Microsoft - typeof](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/type-testing-and-cast#typeof-operator)
 
 ### uint
-[Документация Microsoft - uint]()
+[Документация Microsoft - uint](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/integral-numeric-types)
 
 ### ulong
-[Документация Microsoft - ulong]()
+[Документация Microsoft - ulong](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/integral-numeric-types)
 
 ### unchecked
-[Документация Microsoft - unchecked]()
+[Документация Microsoft - unchecked](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/unchecked)
 
 ### unsafe
-[Документация Microsoft - unsafe]()
+[Документация Microsoft - unsafe](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/unsafe)
 
 ### ushort
-[Документация Microsoft - ushort]()
+[Документация Microsoft - ushort](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/integral-numeric-types)
 
 ### using
-[Документация Microsoft - using]()
+[Документация Microsoft - using](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/using)
 
 ### virtual
-[Документация Microsoft - virtual]()
+[Документация Microsoft - virtual](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/virtual)
 
 ### void
-[Документация Microsoft - void]()
+[Документация Microsoft - void](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/void)
 
 ### volatile
-[Документация Microsoft - volatile]()
+[Документация Microsoft - volatile](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/volatile)
 
 ### while
-[Документация Microsoft - while]()
+[Документация Microsoft - while](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/statements/iteration-statements#the-while-statement)
 
 ## Контекстные ключевые слова. Описание и примеры
 
