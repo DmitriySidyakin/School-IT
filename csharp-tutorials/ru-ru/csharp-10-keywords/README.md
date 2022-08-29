@@ -59,6 +59,7 @@ C\# 10 поддерживает платформа .NET 6.
 ## Список ключевых слов. Описание и примеры
 
 ### abstract
+[Microsoft Documentation - abstract](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/abstract)
 
 ### as
 
