@@ -2,11 +2,11 @@
 
 1. Ключевые слова:
 	- [Ключевые слова C# 10](csharp-tutorials/ru-ru/csharp-10-keywords/README.md)
-2. Учебники
+2. Учебники:
 	*отсутствуют*
-3. Статьи с примерами на C#
+3. Статьи с примерами на C#:
 	*отсутствуют*
-4. Внешние учебники на русском
+4. Внешние учебники на русском:
 	- [Ключевые слова C#](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/)
 	- [Полное руководство по языку программирования С# 10 и платформе .NET 6](https://metanit.com/sharp/tutorial/)
 	
