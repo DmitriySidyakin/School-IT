@@ -297,132 +297,132 @@ C\# 10 поддерживает платформа .NET 6.
 ## Контекстные ключевые слова. Описание и примеры
 
 ### add
-[Документация Microsoft - add]()
+[Документация Microsoft - add](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/add)
 
 ### and
-[Документация Microsoft - and]()
+[Документация Microsoft - and](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/patterns#logical-patterns)
 
 ### alias
-[Документация Microsoft - alias]()
+[Документация Microsoft - alias](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/extern-alias)
 
 ### ascending
-[Документация Microsoft - ascending]()
+[Документация Microsoft - ascending](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/ascending)
 
 ### args
-[Документация Microsoft - args]()
+[Документация Microsoft - args](https://docs.microsoft.com/ru-ru/dotnet/csharp/fundamentals/program-structure/top-level-statements#args)
 
 ### async
-[Документация Microsoft - async]()
+[Документация Microsoft - async](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/async)
 
 ### await
-[Документация Microsoft - await]()
+[Документация Microsoft - await](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/await)
 
 ### by
-[Документация Microsoft - by]()
+[Документация Microsoft - by](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/by)
 
 ### descending
-[Документация Microsoft - descending]()
+[Документация Microsoft - descending](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/descending)
 
 ### dynamic
-[Документация Microsoft - dynamic]()
+[Документация Microsoft - dynamic](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/reference-types)
 
 ### equals
-[Документация Microsoft - equals]()
+[Документация Microsoft - equals](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/equals)
 
 ### from
-[Документация Microsoft - from]()
+[Документация Microsoft - from](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/from-clause)
 
 ### get
-[Документация Microsoft - get]()
+[Документация Microsoft - get](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/get)
 
 ### global
-[Документация Microsoft - global]()
+[Документация Microsoft - global](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/namespace-alias-qualifier)
 
 ### group
-[Документация Microsoft - group]()
+[Документация Microsoft - group](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/group-clause)
 
 ### init
-[Документация Microsoft - init]()
+[Документация Microsoft - init](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/init)
 
 ### into
-[Документация Microsoft - into]()
+[Документация Microsoft - into](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/into)
 
 ### join
-[Документация Microsoft - join]()
+[Документация Microsoft - join](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/join-clause)
 
 ### let
-[Документация Microsoft - let]()
+[Документация Microsoft - let](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/let-clause)
 
 ### managed (соглашение о вызовах указателей функций)
-[Документация Microsoft - managed (соглашение о вызовах указателей функций)]()
+[Документация Microsoft - managed (соглашение о вызовах указателей функций)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/unsafe-code#function-pointers)
 
 ### nameof
-[Документация Microsoft - nameof]()
+[Документация Microsoft - nameof](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/nameof)
 
 ### nint
-[Документация Microsoft - nint]()
+[Документация Microsoft - nint](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/integral-numeric-types)
 
 ### not (не)
-[Документация Microsoft - not (не)]()
+[Документация Microsoft - not (не)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/patterns#logical-patterns)
 
 ### notnull
-[Документация Microsoft - notnull]()
+[Документация Microsoft - notnull](https://docs.microsoft.com/ru-ru/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters#notnull-constraint)
 
 ### nuint
-[Документация Microsoft - nuint]()
+[Документация Microsoft - nuint](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/integral-numeric-types)
 
 ### on
-[Документация Microsoft - on]()
+[Документация Microsoft - on](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/on)
 
 ### or
-[Документация Microsoft - or]()
+[Документация Microsoft - or](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/patterns#logical-patterns)
 
 ### orderby
-[Документация Microsoft - orderby]()
+[Документация Microsoft - orderby](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/orderby-clause)
 
 ### partial (тип)
-[Документация Microsoft - partial (тип)]()
+[Документация Microsoft - partial (тип)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/partial-type)
 
 ### partial (метод)
-[Документация Microsoft - partial (метод)]()
+[Документация Microsoft - partial (метод)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/partial-method)
 
 ### record
-[Документация Microsoft - record]()
+[Документация Microsoft - record](https://docs.microsoft.com/ru-ru/dotnet/csharp/fundamentals/types/records)
 
 ### remove
-[Документация Microsoft - remove]()
+[Документация Microsoft - remove](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/remove)
 
 ### select
-[Документация Microsoft - select]()
+[Документация Microsoft - select](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/select-clause)
 
 ### set
-[Документация Microsoft - set]()
+[Документация Microsoft - set](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/set)
 
 ### unmanaged (соглашение о вызовах указателей функций)
-[Документация Microsoft - nmanaged (соглашение о вызовах указателей функций)]()
+[Документация Microsoft - nmanaged (соглашение о вызовах указателей функций)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/unsafe-code#function-pointers)
 
 ### unmanaged (ограничение универсального типа)
-[Документация Microsoft - unmanaged (ограничение универсального типа)]()
+[Документация Microsoft - unmanaged (ограничение универсального типа)](https://docs.microsoft.com/ru-ru/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters#unmanaged-constraint)
 
 ### value
-[Документация Microsoft - value]()
+[Документация Microsoft - value](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/value)
 
 ### var
-[Документация Microsoft - var]()
+[Документация Microsoft - var](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/var)
 
 ### when (условие фильтра)
-[Документация Microsoft - when (условие фильтра)]()
+[Документация Microsoft - when (условие фильтра)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/when)
 
 ### where (ограничение универсального типа)
-[Документация Microsoft - where (ограничение универсального типа)]()
+[Документация Microsoft - where (ограничение универсального типа)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/where-generic-type-constraint)
 
 ### where (предложение запроса)
-[Документация Microsoft - where (предложение запроса)]()
+[Документация Microsoft - where (предложение запроса)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/where-clause)
 
 ### with
-[Документация Microsoft - with]()
+[Документация Microsoft - with](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/with-expression)
 
 ### yield
-[Документация Microsoft - yield]()
+[Документация Microsoft - yield](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/yield)
 
 
