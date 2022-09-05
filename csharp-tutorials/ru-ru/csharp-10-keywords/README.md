@@ -182,40 +182,47 @@ E as T == E is T ? (T)(E) : (T)null
 Тип данных, представляющий собой 32-разрядное целое число со знаком (*System.Int32*).
 
 ### interface
-[Документация Microsoft - interface](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/interface)
+Ключевое слово для определения интерфейса. Интерфейс преставляет собой договор для классов/стуктур для соглашения об их членах.
 
 ### internal
-[Документация Microsoft - internal](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/internal)
+Ключевое слово используется для ограничения доступа. Оно используется в следующих уровнях доступа:
+
+	- **internal** - доступ ограничивается текущей сборкой;
+	- **protected internal** - доступ ограничивается текущей сборкой или типами, которые являются производными от содержащего класса.
 
 ### is
-[Документация Microsoft - is](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/is)
+Оператор проверки типа. Проверяет, совместим ли результат выражения с указанным типом. Возвращает **true** или **false**.
 
 ### lock
-[Документация Microsoft - lock](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/statements/lock)
+Оператор блокировки доступа к объекту. Опертор блокирует объект для других параллельных выполнений, где также использается этот оператор с таким же объектом. 
 
 ### long
-[Документация Microsoft - long](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/integral-numeric-types)
+Тип данных, представляющий собой 64-разрядное целое число со знаком (*System.Int64*).
 
 ### namespace
-[Документация Microsoft - namespace](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/namespace)
+Ключевое слово для объявления пространства имён.
 
 ### new
-[Документация Microsoft - new](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/new-operator)
+
+	- Опрератор **new** используется для создания экземпляра типа;
+	- Используется, как ограничение универсального типа, о том что агрумент типа должен иметь конструктор поумолчанию.
 
 ### null
-[Документация Microsoft - null](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/null)
+Ссылка, которая не ссылается на объект. Может присваиваться для начальной инициализации объектам.
 
 ### object
-[Документация Microsoft - object](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/reference-types)
+Базовый тип данных для объектов. Является псевдонимом *System.Object*.
 
 ### operator
-[Документация Microsoft - operator](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/operator-overloading)
+Ключевое слово для перегрузки операторов.
 
 ### out
-[Документация Microsoft - out](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/out)
+Ипользуется:
+	- для передачи параметра по ссылке, а не по значению. Представляет собой выходной параметр;
+	- для обозначения ковариантных параметров в универсальных типах для интерфейсов и делегатов.
 
 ### override
-[Документация Microsoft - override](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/override)
+Модификатор override нужен для переопределения абстрактной или виртуальной реализации унаследанного метода, свойства, индексатора, события.
 
 ### params
 [Документация Microsoft - params](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/params)
