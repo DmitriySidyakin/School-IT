@@ -61,9 +61,14 @@ C\# 10 поддерживает платформа .NET 6.
 ## Список ключевых слов. Описание и примеры
 
 ### abstract
-[Документация Microsoft - abstract](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/abstract)
+Ключевое слово нужно для объявления абстрактного класса и его абстрактых элементов. Абстрактными элементами могут быть: методы, свойства, индексаторы и события. Нельзя создавать экземпляры абстрактного класса.
 
 ### as
+Оператор *as* нужен для преобразования ссылочных типов или типов поддерживающих **null** значения. Он не вызывает исключения при приведении типов. Вот его эквивалентная запись:
+```cs
+E as T == E is T ? (T)(E) : (T)null
+```
+
 [Документация Microsoft - as](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/type-testing-and-cast#as-operator)
 
 ### base
