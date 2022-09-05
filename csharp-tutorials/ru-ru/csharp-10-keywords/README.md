@@ -158,7 +158,7 @@ E as T == E is T ? (T)(E) : (T)null
 Объявление цикла "со счётчиком".
 
 ### foreach
-Цикл для перебора элементов *System.Collections.IEnumerable* или *System.Collections.Generic.IEnumerable<T>*.
+Цикл для перебора элементов *System.Collections.IEnumerable* или *System.Collections.Generic.IEnumerable<<T>>*.
 
 ### goto
 Оператор перехода к метке.
