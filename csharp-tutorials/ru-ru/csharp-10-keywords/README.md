@@ -372,7 +372,7 @@ public static string HowOldIsMen(uint daysOld) => daysOld switch
 Создание именам сборок альтернативных имён. К примеру, используются две сборки с одинаковым полным именем.
 
 ### ascending
-Ключевое слово ascending используется в запросах LINQ для задания порядка сортировки от наименьшего к наибольшему.
+Ключевое слово **ascending** используется в запросах LINQ для задания порядка сортировки от наименьшего к наибольшему.
 Пример:
 ```cs
 IEnumerable<string> sortedNames =
@@ -401,34 +401,65 @@ else
 Модификатор async позволяет указать, что метод, лямбда-выражение или анонимный метод является асинхронным.
 
 ### await
-[Документация Microsoft - await](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/await)
+Ключевое слово **await** имеет несколько назначений:
+- оператор **await** ожидает завершения асинхронной операции;
+- оператор **await foreach** используется для последовательного обхода асинхронного перечисления (IAsyncEnumerable<T>);
+- начиная с C# 7.1 метод Main может возвращать Task, а также тип возвращаемого значения Task<int>, позволяя использовать оператор await в теле.
 
 ### by
-[Документация Microsoft - by](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/by)
+Используется в запросах LINQ для указания способа группировки возвращаемых элементов.
+Пример:
+```cs
+var query = from emp in employees
+            group emp by employees.LastName[0];
+```
 
 ### descending
-[Документация Microsoft - descending](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/descending)
+Ключевое слово **descending** используется в запросах LINQ для задания порядка сортировки от наибольшего к наименьшему.
+Пример:
+```cs
+IEnumerable<string> sortedNames =
+    from name in names
+    orderby name descending
+    select name;
+```
 
 ### dynamic
-[Документация Microsoft - dynamic](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/reference-types)
+Тип **dynamic** - это тип данный генерируемый во время выполнения, он не проходит проверку компиляции.
 
 ### equals
-[Документация Microsoft - equals](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/equals)
+Контекстное ключевое слово **equals** используется в запросах LINQ для настройки выражения **join**.
+Пример:
+```cs
+var innerJoinQuery =
+    from dep in departments
+    join emp in employees on dep.Id equals emp.DepartmentId
+    select new { EmployeeFullName = emp.FullName, DepartmentName = dep.Name };
+```
 
 ### from
-[Документация Microsoft - from](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/from-clause)
+Выражение запроса LINQ начинается с ключевого слова **from**. Оно определяет источник данных запроса (после ключевого слова **in**) и локальную переменную, которая представляет собой отдельный элемент из набора.
 
 ### get
-[Документация Microsoft - get](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/get)
+Ключевое слово **get** ипользуется в поле и/или индексаторе для получения значения.
 
 ### global
-[Документация Microsoft - global](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/namespace-alias-qualifier)
+Псевдоним глобального пространства имён.
+Пример:
+```cs
+global::System.Console.WriteLine("Привет, Мир!");
+```
 
 ### group
-[Документация Microsoft - group](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/group-clause)
+Контекстное ключевое слово **group** нужно для группировки в запросах LINQ. Оно возвращает последовательность сгруппированных объектов IGrouping<TKey,TElement>.
+Пример:
+```cs
+var query = from emp in employees
+            group emp by employees.LastName[0];
+```
 
 ### init
-[Документация Microsoft - init](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/init)
+В C# 9 и более поздних версий метод доступа к свойству или индексатору **init** используется для назначения нового значения только при создании объекта.
 
 ### into
 [Документация Microsoft - into](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/into)
