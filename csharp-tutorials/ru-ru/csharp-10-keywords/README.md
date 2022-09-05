@@ -70,44 +70,53 @@ E as T == E is T ? (T)(E) : (T)null
 ```
 
 ### base
-[Документация Microsoft - base](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/base)
+Ключевое слово используется для доступа к членам базового класса в случаях:
+	- Когда член переопределён
+	- Для доступа к конструктору базового класса
 
 ### bool
-[Документация Microsoft - bool](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/bool)
+Ключевое слово для определения булевой переменной. Псевдоним для структуры System.Boolean.
 
 ### break
-[Документация Microsoft - break](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/statements/jump-statements#the-break-statement)
+	1. Оператор используется для преостановки циклов (**for**, **foreach**, **while** или **do**).
+	2. Оперетор используется для завершения элемента в цикле **switch**.
 
 ### byte
-[Документация Microsoft - byte](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/integral-numeric-types)
+Ключевое слово служит для определения однобайтового беззнакового целого числа (от 0 до 255).
 
 ### case
-[Документация Microsoft - case](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/statements/selection-statements#the-switch-statement)
+Ключевое слово для обозначения подходящего случая для оператора **switch**. Порядок выбора условия оператора проверяется с верху вниз.
 
 ### catch
-[Документация Microsoft - catch](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/try-catch)
+Ключевое слово предназначено для обработки исключения вызванного в блоке **try**. Порядок проверки множества операторов обработки исключений происходит от первого к последнему.
 
 ### char
-[Документация Microsoft - char](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/char)
+Ключевое слово используется для объявления переменной, которая хранит в себе символ UTF-16 Unicode. Псевдоним для System.Char.
 
 ### checked
-[Документация Microsoft - checked](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/checked)
+Оператор для проверки переполнения арифметических операций и операций преобразования.
 
 ### class
-[Документация Microsoft - class](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/class)
+Ключевое слово предназначено для объявления класса.
 
 ### const
-[Документация Microsoft - const](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/const)
+Используется для объявления константной переменной или константного поля.
 
 ### continue
-[Документация Microsoft - continue](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/statements/jump-statements#the-continue-statement)
+Ключевое слово предназначено для перехода к следующей итерации цикла (**for**, **foreach**, **while** или **do**).
 
 ### decimal
-[Документация Microsoft - decimal](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types)
+Тип данных с плавающей запятой, самый большой. Занимает 16 байт.
 
 ### default
-[Документация Microsoft - default](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/default)
-
+Ключевое слово default можно использовать в следующих контекстах:
+	- для указания значения по умолчанию в операторе **switch**;
+	- в качестве оператора или литерала по умолчанию для создания значения по умолчанию для типа данных.
+	- в качестве ограничения типа для переопределения универсального метода или явной реализации интерфейса.
+	```cs
+	where T : default
+	```
+	
 ### delegate
 [Документация Microsoft - delegate](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/reference-types)
 
