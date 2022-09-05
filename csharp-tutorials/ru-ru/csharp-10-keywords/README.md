@@ -411,7 +411,7 @@ else
 Пример:
 ```cs
 var query = from emp in employees
-            group emp by employees.LastName[0];
+            group emp by emp.LastName;
 ```
 
 ### descending
@@ -455,7 +455,7 @@ global::System.Console.WriteLine("Привет, Мир!");
 Пример:
 ```cs
 var query = from emp in employees
-            group emp by employees.LastName[0];
+            group emp by emp.LastName;
 ```
 
 ### init
