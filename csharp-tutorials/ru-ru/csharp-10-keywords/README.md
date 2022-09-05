@@ -448,7 +448,7 @@ E as T == E is T ? (T)(E) : (T)null
 [Документация Microsoft - set](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/set)
 
 ### unmanaged (соглашение о вызовах указателей функций)
-[Документация Microsoft - nmanaged (соглашение о вызовах указателей функций)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/unsafe-code#function-pointers)
+[Документация Microsoft - unmanaged (соглашение о вызовах указателей функций)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/unsafe-code#function-pointers)
 
 ### unmanaged (ограничение универсального типа)
 [Документация Microsoft - unmanaged (ограничение универсального типа)](https://docs.microsoft.com/ru-ru/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters#unmanaged-constraint)
