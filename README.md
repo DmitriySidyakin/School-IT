@@ -5,7 +5,7 @@
 2. Учебники:
 	*отсутствуют*
 3. Статьи с примерами на C#:
-	- Алгоритмы:
+	- [Алгоритмы](csharp-articles/ru-ru/algorithms-on-csharp/README.md):
 		- *отсутствуют*
 4. Внешние учебники на русском:
 	- [Ключевые слова C#](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/)
