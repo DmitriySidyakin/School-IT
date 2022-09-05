@@ -119,61 +119,66 @@ E as T == E is T ? (T)(E) : (T)null
 	
 	
 ### delegate
-[Документация Microsoft - delegate](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/reference-types)
+Объявление делегата аналогично сигнатуре метода. Он служит, как указатель на метод.
 
 ### do
-[Документация Microsoft - do](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/statements/iteration-statements#the-do-statement)
+Оператор цикла с постусловием. Выолнятся от одного до нескольких раз. Выполняется пока условие цикла равно **true**.
 
 ### double
-[Документация Microsoft - double](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types)
+Тип данных с плавающей запятой, имеет средний размер. Занимает 8 байт.
 
 ### else
-[Документация Microsoft - else](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/statements/selection-statements#the-if-statement)
+Ключевое слово используется в операторе **if**, как оператор выполняемый в случае невыполнения условия (ложности условия).
 
 ### enum
-[Документация Microsoft - enum](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/enum)
+Тип перечисления, определяемый набором констант целочисленного типа.
 
 ### event
-[Документация Microsoft - event](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/event)
+Объявления события, типом данных которого является определённый делегат.
 
 ### explicit
-[Документация Microsoft - explicit](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/user-defined-conversion-operators)
+Определения оператора неявного преобразования (тип данных в текущий класс).
 
 ### extern
-[Документация Microsoft - extern](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/extern)
+Ключевое слово используется в объявлении метода с внешней реализацией.
 
 ### false
-[Документация Microsoft - false](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/bool)
+Литерал значения лжи в типе данных bool (System.Boolean).
 
 ### finally
-[Документация Microsoft - finally](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/try-finally)
+Ключевое слово используется в опреаторе try-catch-finally для завершения обработки исключения или блока try.
 
 ### fixed
-[Документация Microsoft - fixed](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/fixed-statement)
+Ключевое слово создает блок кода с указателем на управляемую переменную и "закрепляет" эту переменную во время выполнения оператора.
 
 ### float
-[Документация Microsoft - float](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types)
+Тип данных с плавающей запятой, имеет наименьший размер. Занимает 4 байта.
 
 ### for
-[Документация Microsoft - for](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/statements/iteration-statements#the-for-statement)
+Объявление цикла "со счётчиком".
 
 ### foreach
-[Документация Microsoft - foreach](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/statements/iteration-statements#the-foreach-statement)
+Цикл для перебора элементов System.Collections.IEnumerable или System.Collections.Generic.IEnumerable<T>.
 
 ### goto
-[Документация Microsoft - goto](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/statements/jump-statements#the-goto-statement)
+Оператор перехода к метке.
 
 ### if
-[Документация Microsoft - if](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/statements/selection-statements#the-if-statement)
+Оператор проверки условия. Блок кода оператора выполняется, когда условие истинно (**true**).
 
 ### implicit
-[Документация Microsoft - implicit](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/user-defined-conversion-operators)
+Определение оператора явного преобразования (текущий класс в тип данных).
 
 ### in
-[Документация Microsoft - in](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/in)
+Ключевое слово in используется в следующих случаях:
+	- Цикл **foreach**, для определения перебераемого экземпляра коллекции. 
+	- Параметры универсального типа в универсальных интерфейсах и делегатах, для определения контравариантного параметра.
+	- В качестве модификатора параметра, для задания его непереопределяемым/входным.
+	- В запосах LINQ, совместно с ключевым словом join.
+	- В запосах LINQ, совместно с ключевым словом from.
 
 ### int
-[Документация Microsoft - int](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/integral-numeric-types)
+Тип данных, представляющий собой 32-разрядное целое число со знаком (System.Int32).
 
 ### interface
 [Документация Microsoft - interface](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/interface)
