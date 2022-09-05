@@ -226,97 +226,122 @@ E as T == E is T ? (T)(E) : (T)null
 Модификатор override нужен для переопределения абстрактной или виртуальной реализации унаследанного метода, свойства, индексатора, события.
 
 ### params
-[Документация Microsoft - params](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/params)
+Ключевое слово для задания массива параметров определённого типа. Это переменное число параметров. Когда параметры не передаются, то передаётся массив нулевого размера. Параметры можно передавать через запятую или в массиве тогоже типа.
 
 ### private
-[Документация Microsoft - private](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/private)
+Ключевое слово используется в двух модификаторах доступа:
+
+	- private - lоступ к типу или члену возможен в том же типе реализации класса или структуры (class, struct);
+	- private protected - то же самое, что и private, но доступ к типу или элементу возможен из типов, производных от объекта class и объявляемых в сборке, содержащей этот объект.
 
 ### protected
-[Документация Microsoft - protected](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/protected)
+Ключевое слово используется в трёх модификаторах доступа:
+
+	- protected - доступ из этого же класса или производного;
+	- protected internal - используется, как предыдущий уровень доступа (protected), но доступ так же доступен из текущей сборки;
+	- private protected - доступ для производных классов, но в тойже сборке.
 
 ### public
-[Документация Microsoft - public](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/public)
+Модификатор доступа к типам и их членам с максимальным уровнем доступа, видим всему.
 
 ### readonly
-[Документация Microsoft - readonly](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/readonly)
+Ключевое слово, которое может использоваться в четырёх контекстах:
+
+	- поле только для чтения. Присваение может происходить сколько угодно раз при объявлении или конструкторе;
+	- при объявлении структуры, объявление readonly struct определяет, то что структура является неизменяемой;
+	- при объявлении членой не изменяемой структуры;
+	- при возвращении значения методом модификатор ref readonly указывает, что ссылка является не изменяемой. 
 
 ### ref
-[Документация Microsoft - ref](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/ref)
+Ключевое слово **ref** указывает на то, что значение передается по ссылке. Оно используется в четырех разных ситуациях:
+
+	- при передаче параметров в метод по ссылке;
+	- для возвращения методом значения по ссылке;
+	- в ссылочных локальных переменных;
+	- в объявлении структуры, чтобы указать, что она хранится в стеке.
 
 ### return
-[Документация Microsoft - return](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/statements/jump-statements#the-return-statement)
+Используется для завершения функции или возвращения ею результата.
 
 ### sbyte
-[Документация Microsoft - sbyte](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/integral-numeric-types)
+Ключевое слово используется для обозначения знакового однобайтового целого числа (от -128 до 127).
 
 ### sealed
-[Документация Microsoft - sealed](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/sealed)
+Модификатор класса, запрещающий наследовать этот класс.
 
 ### short
-[Документация Microsoft - short](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/sizeof)
+Тип данных для представления 16-разрядного целого числа со знаком (от -32 768 до 32 767).
 
 ### sizeof
-[Документация Microsoft - sizeof](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/sizeof)
+Опратор для определения числа байт занимаемых переменной.
 
 ### stackalloc
-[Документация Microsoft - stackalloc](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/stackalloc)
+Ключевое слово **stackalloc** выделяет блок памяти в стеке.
 
 ### static
-[Документация Microsoft - static](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/static)
+Испольуется для:
+
+	- объявления статических членов;
+	- объявления статических классов;
+	- в операторе импорта using static, для импорта элементов static из одного типа.
 
 ### string
-[Документация Microsoft - string](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/reference-types)
+Ссылояный тип данных для представления строк (последовательностей символов), является псевдонимом для *System.String*.
 
 ### struct
-[Документация Microsoft - struct](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/struct)
+Ключевое слово для создания структуры.
 
 ### switch
-[Документация Microsoft - switch](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/switch-expression)
+Оператор выбора.
 
 ### this
-[Документация Microsoft - this](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/this)
+Ссылка на текущий экземпляр класса.
 
 ### throw
-[Документация Microsoft - throw](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/throw)
+Ключевое слово для генерации исключения.
 
 ### true
-[Документация Microsoft - true](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/bool)
+Значение истины типа **bool**.
 
 ### try
-[Документация Microsoft - try](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/try-catch)
+Оператор для объявления блока, в котором перехватывается исключение.
 
 ### typeof
-[Документация Microsoft - typeof](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/type-testing-and-cast#typeof-operator)
+Оператор для получения System.Type для указанного типа, т.е. получение типа.
 
 ### uint
-[Документация Microsoft - uint](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/integral-numeric-types)
+Целочисленный тип данных для представлени 32-разрядного числа без знака (от 0 до 4 294 967 295).
 
 ### ulong
-[Документация Microsoft - ulong](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/integral-numeric-types)
+Целочисленный тип данных для представлени 64-разрядного числа без знака (от 0 до 18 446 744 073 709 551 615).
 
 ### unchecked
-[Документация Microsoft - unchecked](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/unchecked)
+Данная инструкция отключает проверку переполнения при арифметических операциях и преобразованиях целочисленных чисел.
 
 ### unsafe
-[Документация Microsoft - unsafe](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/unsafe)
+Ключевое слово unsafe обозначает небезопасный контекст, необходимый для выполнения любых операций с применением указателей.
 
 ### ushort
-[Документация Microsoft - ushort](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/integral-numeric-types)
+Целочисленный тип данных для представлени 16-разрядного числа без знака (от 0 до 65 535).
 
 ### using
-[Документация Microsoft - using](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/using)
+Ключевое слово **using** используется в двух случаях:
+
+	- испорт простанства имён;
+	- объявление блока кода, с освобождением по окончаию ресурсов переменной.
+
 
 ### virtual
-[Документация Microsoft - virtual](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/virtual)
+Ключевое слово **virtual** используется для объявления методов, свойств, индексаторов и событий и разрешения их переопределения в производном классе. 
 
 ### void
-[Документация Microsoft - void](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/void)
+Используется для того, чтобы обозначить метод, который не возвращает значение.
 
 ### volatile
-[Документация Microsoft - volatile](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/volatile)
+Ключевое слово **volatile** помечает поле и позволяет изменять его нескольким потокам, выполняемых одновременно.
 
 ### while
-[Документация Microsoft - while](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/statements/iteration-statements#the-while-statement)
+Цикл с предусловием.
 
 ## Контекстные ключевые слова. Описание и примеры
 
