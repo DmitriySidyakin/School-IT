@@ -345,22 +345,60 @@ E as T == E is T ? (T)(E) : (T)null
 ## Контекстные ключевые слова. Описание и примеры
 
 ### add
-[Документация Microsoft - add](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/add)
+Контекстное ключевое слово **add** используется для определения метода контроля на добавление делегата в событие.
 
 ### and
-[Документация Microsoft - and](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/patterns#logical-patterns)
+Оператор **and** действует с начала C# 9.0. Он создан для логического объединения шаблонов.
+Пример:
+```cs
+public static string HowOldIsMen(uint daysOld) => daysOld switch
+{
+	<= 10 => "Новорождённые",
+	>10 and <= 365 => "Грудной ребёнок",
+	> 365 and <= (365 * 3) => "Раннее детство",
+	> (365 * 3) and <= (365 * 7) => "Первый период детства",
+	> (365 * 7) and <= (365 * 12) => "Второй период детства",
+	> (365 * 12) and <= (365 * 16) => "Подростковый возраст",
+	> (365 * 16) and <= (365 * 21) => "Юношеский возраст",
+	> (365 * 21) and <= (365 * 35) => "Средний возраст (первый период)",
+	> (365 * 35) and <= (365 * 60) => "Средний возраст (второй период)",
+	> (365 * 60) and <= (365 * 75) => "Пожилые люди",
+	> (365 * 75) and <= (365 * 90) => "Старческий возраст",
+	> (365 * 90) => "Долгожители",
+};
+```
 
 ### alias
-[Документация Microsoft - alias](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/extern-alias)
+Создание именам сборок альтернативных имён. К примеру, используются две сборки с одинаковым полным именем.
 
 ### ascending
-[Документация Microsoft - ascending](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/ascending)
+Ключевое слово ascending используется в запросах LINQ для задания порядка сортировки от наименьшего к наибольшему.
+Пример:
+```cs
+IEnumerable<string> sortedNames =
+    from name in names
+    orderby name ascending
+    select name;
+```
 
 ### args
-[Документация Microsoft - args](https://docs.microsoft.com/ru-ru/dotnet/csharp/fundamentals/program-structure/top-level-statements#args)
+Операторы верхнего уровня могут ссылать на переменную **args** для доступа к аргументам коммандной строки.
+```cs
+if (args.Length > 0)
+{
+	foreach (var arg in args)
+	{
+		Console.WriteLine($"Агрумент={arg}");
+	}
+}
+else
+{
+	Console.WriteLine("Без аргументов");
+}
+```
 
 ### async
-[Документация Microsoft - async](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/async)
+Модификатор async позволяет указать, что метод, лямбда-выражение или анонимный метод является асинхронным.
 
 ### await
 [Документация Microsoft - await](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/await)

@@ -10,10 +10,8 @@
 
   <ItemGroup>
     <Folder Include="ContextualKeywords\Add\" />
-    <Folder Include="ContextualKeywords\And\" />
     <Folder Include="ContextualKeywords\Alias\" />
     <Folder Include="ContextualKeywords\Ascending\" />
-    <Folder Include="ContextualKeywords\Args\" />
     <Folder Include="ContextualKeywords\Async\" />
     <Folder Include="ContextualKeywords\Await\" />
     <Folder Include="ContextualKeywords\By\" />
