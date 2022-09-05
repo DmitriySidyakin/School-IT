@@ -431,7 +431,7 @@ IEnumerable<string> sortedNames =
 Контекстное ключевое слово **equals** используется в запросах LINQ для настройки выражения **join**.
 Пример:
 ```cs
-var innerJoinQuery =
+var employeesAndsDepartments =
     from dep in departments
     join emp in employees on dep.Id equals emp.DepartmentId
     select new { EmployeeFullName = emp.FullName, DepartmentName = dep.Name };
