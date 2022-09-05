@@ -11,4 +11,5 @@
 	- [Ключевые слова C#](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/)
 	- [Полное руководство по языку программирования С# 10 и платформе .NET 6](https://metanit.com/sharp/tutorial/)
 	- [Руководство по программированию на C#](https://docs.microsoft.com/ru-ru/dotnet/csharp/programming-guide/)
+	- [Паттерны проектирования в C# и .NET](https://metanit.com/sharp/patterns/)
 	
