@@ -1,9 +1,9 @@
 # Учебники и статьи по C#
 
-1. Ключевые слова:
-	- [Ключевые слова C# 10 (шпаргалка-напоминалка)](csharp-tutorials/ru-ru/csharp-10-keywords/README.md)
-2. Учебники:
+1. Учебники:
 	*отсутствуют*
+2. Ключевые слова:
+	- [Ключевые слова C# 10 (шпаргалка-напоминалка)](csharp-tutorials/ru-ru/csharp-10-keywords/README.md)
 3. Статьи с примерами на C#:
 	- [Алгоритмы](csharp-articles/ru-ru/algorithms-on-csharp/README.md):
 		- *отсутствуют*
