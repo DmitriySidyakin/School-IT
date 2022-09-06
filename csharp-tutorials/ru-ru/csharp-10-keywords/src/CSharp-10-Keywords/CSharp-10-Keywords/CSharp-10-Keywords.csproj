@@ -1,0 +1,132 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>CSharp_10_Keywords</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="ContextualKeywords\Add\" />
+    <Folder Include="ContextualKeywords\Alias\" />
+    <Folder Include="ContextualKeywords\Ascending\" />
+    <Folder Include="ContextualKeywords\Async\" />
+    <Folder Include="ContextualKeywords\Await\" />
+    <Folder Include="ContextualKeywords\By\" />
+    <Folder Include="ContextualKeywords\Descending\" />
+    <Folder Include="ContextualKeywords\Dynamic\" />
+    <Folder Include="ContextualKeywords\Equals\" />
+    <Folder Include="ContextualKeywords\From\" />
+    <Folder Include="ContextualKeywords\Get\" />
+    <Folder Include="ContextualKeywords\Global\" />
+    <Folder Include="ContextualKeywords\Group\" />
+    <Folder Include="ContextualKeywords\Init\" />
+    <Folder Include="ContextualKeywords\Into\" />
+    <Folder Include="ContextualKeywords\Join\" />
+    <Folder Include="ContextualKeywords\Let\" />
+    <Folder Include="ContextualKeywords\Managed\" />
+    <Folder Include="ContextualKeywords\Nameof\" />
+    <Folder Include="ContextualKeywords\Nint\" />
+    <Folder Include="ContextualKeywords\Not\" />
+    <Folder Include="ContextualKeywords\Notnull\" />
+    <Folder Include="ContextualKeywords\Nuint\" />
+    <Folder Include="ContextualKeywords\On\" />
+    <Folder Include="ContextualKeywords\Or\" />
+    <Folder Include="ContextualKeywords\Orderby\" />
+    <Folder Include="ContextualKeywords\PartialType\" />
+    <Folder Include="ContextualKeywords\PartialMethod\" />
+    <Folder Include="ContextualKeywords\Record\" />
+    <Folder Include="ContextualKeywords\Remove\" />
+    <Folder Include="ContextualKeywords\Select\" />
+    <Folder Include="ContextualKeywords\Set\" />
+    <Folder Include="ContextualKeywords\UnmanagedFunctionPointers\" />
+    <Folder Include="ContextualKeywords\UnmanagedGenerics\" />
+    <Folder Include="ContextualKeywords\Value\" />
+    <Folder Include="ContextualKeywords\Var\" />
+    <Folder Include="ContextualKeywords\When\" />
+    <Folder Include="ContextualKeywords\WhereGenerics\" />
+    <Folder Include="ContextualKeywords\WhereLinq\" />
+    <Folder Include="ContextualKeywords\With\" />
+    <Folder Include="ContextualKeywords\Yield\" />
+    <Folder Include="Keywords\Abstract\" />
+    <Folder Include="Keywords\As\" />
+    <Folder Include="Keywords\Base\" />
+    <Folder Include="Keywords\Bool\" />
+    <Folder Include="Keywords\Break\" />
+    <Folder Include="Keywords\Byte\" />
+    <Folder Include="Keywords\Case\" />
+    <Folder Include="Keywords\Catch\" />
+    <Folder Include="Keywords\Char\" />
+    <Folder Include="Keywords\Checked\" />
+    <Folder Include="Keywords\Class\" />
+    <Folder Include="Keywords\Const\" />
+    <Folder Include="Keywords\Continue\" />
+    <Folder Include="Keywords\Decimal\" />
+    <Folder Include="Keywords\Default\" />
+    <Folder Include="Keywords\Delegate\" />
+    <Folder Include="Keywords\Do\" />
+    <Folder Include="Keywords\Double\" />
+    <Folder Include="Keywords\Else\" />
+    <Folder Include="Keywords\Enum\" />
+    <Folder Include="Keywords\Event\" />
+    <Folder Include="Keywords\Explicit\" />
+    <Folder Include="Keywords\Extern\" />
+    <Folder Include="Keywords\False\" />
+    <Folder Include="Keywords\Finally\" />
+    <Folder Include="Keywords\Fixed\" />
+    <Folder Include="Keywords\Float\" />
+    <Folder Include="Keywords\For\" />
+    <Folder Include="Keywords\Foreach\" />
+    <Folder Include="Keywords\Goto\" />
+    <Folder Include="Keywords\If\" />
+    <Folder Include="Keywords\Implicit\" />
+    <Folder Include="Keywords\In\" />
+    <Folder Include="Keywords\Int\" />
+    <Folder Include="Keywords\Interface\" />
+    <Folder Include="Keywords\Internal\" />
+    <Folder Include="Keywords\Is\" />
+    <Folder Include="Keywords\Lock\" />
+    <Folder Include="Keywords\Long\" />
+    <Folder Include="Keywords\Namespace\" />
+    <Folder Include="Keywords\New\" />
+    <Folder Include="Keywords\Null\" />
+    <Folder Include="Keywords\Object\" />
+    <Folder Include="Keywords\Operator\" />
+    <Folder Include="Keywords\Out\" />
+    <Folder Include="Keywords\Override\" />
+    <Folder Include="Keywords\Params\" />
+    <Folder Include="Keywords\Private\" />
+    <Folder Include="Keywords\Protected\" />
+    <Folder Include="Keywords\Public\" />
+    <Folder Include="Keywords\Readonly\" />
+    <Folder Include="Keywords\Ref\" />
+    <Folder Include="Keywords\Return\" />
+    <Folder Include="Keywords\Sbyte\" />
+    <Folder Include="Keywords\Sealed\" />
+    <Folder Include="Keywords\Short\" />
+    <Folder Include="Keywords\Sizeof\" />
+    <Folder Include="Keywords\Stackalloc\" />
+    <Folder Include="Keywords\Static\" />
+    <Folder Include="Keywords\String\" />
+    <Folder Include="Keywords\Struct\" />
+    <Folder Include="Keywords\Switch\" />
+    <Folder Include="Keywords\This\" />
+    <Folder Include="Keywords\Throw\" />
+    <Folder Include="Keywords\True\" />
+    <Folder Include="Keywords\Try\" />
+    <Folder Include="Keywords\Typeof\" />
+    <Folder Include="Keywords\Uint\" />
+    <Folder Include="Keywords\Ulong\" />
+    <Folder Include="Keywords\Unchecked\" />
+    <Folder Include="Keywords\Unsafe\" />
+    <Folder Include="Keywords\Ushort\" />
+    <Folder Include="Keywords\Using\" />
+    <Folder Include="Keywords\Virtual\" />
+    <Folder Include="Keywords\Void\" />
+    <Folder Include="Keywords\Volatile\" />
+    <Folder Include="Keywords\While\" />
+  </ItemGroup>
+
+</Project>
