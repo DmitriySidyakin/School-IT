@@ -194,7 +194,7 @@ E as T == E is T ? (T)(E) : (T)null
 Оператор проверки типа. Проверяет, совместим ли результат выражения с указанным типом. Возвращает **true** или **false**.
 
 ### lock
-Оператор блокировки доступа к объекту. Опертор блокирует объект для других параллельных выполнений, где также использается этот оператор с таким же объектом. 
+Оператор блокировки доступа к объекту. Опертор блокирует объект для других параллельных выполнений, где также используется этот оператор с таким же объектом. 
 
 ### long
 Тип данных, представляющий собой 64-разрядное целое число со знаком (*System.Int64*).
@@ -480,40 +480,77 @@ var query = from emp in employees
 Представляет собой 32- или 64-разрядное целое число со знаком, является псевдонимом для *System.IntPtr*. 
 
 ### not (не)
-[Документация Microsoft - not (не)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/patterns#logical-patterns)
+Оператор **not** действует с начала C# 9.0. Он создан участия в логических шаблонах как оператор отрицания.
+Пример:
+```cs
+if (user is not null)
+{
+	// ...
+}
+```
 
 ### notnull
-[Документация Microsoft - notnull](https://docs.microsoft.com/ru-ru/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters#notnull-constraint)
+Ограничение **notnull** пишут, чтобы указать, что аргумент типа должен быть типом значения, не допускающим значения NULL, или ссылочным типом, не допускающим значения NULL.
+Пример:
+```cs
+class Student<T> where T: notnull
+{
+	// ...
+}
+```
 
 ### nuint
-[Документация Microsoft - nuint](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/integral-numeric-types)
+Представляет собой 32- или 64-разрядное целое число без знака, является псевдонимом для *System.UIntPtr*.
 
 ### on
-[Документация Microsoft - on](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/on)
+Контекстное ключевое слово **on** используется в предложении соединения выражения запроса LINQ для указания условия соединения.
+Пример:
+```cs
+var employeesAndsDepartments =
+    from dep in departments
+    join emp in employees on dep.Id equals emp.DepartmentId
+    select new { EmployeeFullName = emp.FullName, DepartmentName = dep.Name };
+```
 
 ### or
-[Документация Microsoft - or](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/patterns#logical-patterns)
+Оператор **or** действует с начала C# 9.0. Он создан для представления логической дизъюнкции (логического "или").
 
 ### orderby
-[Документация Microsoft - orderby](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/orderby-clause)
+**orderby** используется в запросах LINQ для задания условия сортировки.
+Пример:
+```cs
+IEnumerable<string> sortedNames =
+    from name in names
+    orderby name descending
+    select name;
+```
 
 ### partial (тип)
-[Документация Microsoft - partial (тип)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/partial-type)
+Контекстное ключевое слово позволяет разделять определения классов, структур, интерфейсов или записей на несколько файлов.
 
 ### partial (метод)
-[Документация Microsoft - partial (метод)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/partial-method)
+Контекстное ключевое слово означает, что сигнатура метода содержиться в этом файле, а его реализация в другом.
 
 ### record
-[Документация Microsoft - record](https://docs.microsoft.com/ru-ru/dotnet/csharp/fundamentals/types/records)
+Контекстное ключевое слово record предназначено для определения ссылочного типа, который предоставляет встроенные возможности для инкапсуляции данных. C# 10 позволяет синтаксису record class в качестве синонима уточнить ссылочный тип и record struct определить тип значения с аналогичными функциями.
+Пример:
+```cs
+public readonly record struct Employee(int Id, int DepartmentId, string FirstName, string LastName);
+```
 
 ### remove
-[Документация Microsoft - remove](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/remove)
+Контекстное ключевое слово **remove** используется для определения метода контроля для удаления делегата из события.
 
 ### select
-[Документация Microsoft - select](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/select-clause)
+Контекстное ключевое слово **select** нужно для того, чтобы указать какое значение будет получено после выполнения запроса LINQ.
+Пример:
+```cs
+var query = from emp in employees
+            select emp.LastName
+```
 
 ### set
-[Документация Microsoft - set](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/set)
+Ключевое слово **set** ипользуется в поле и/или индексаторе для установки значения.
 
 ### unmanaged (соглашение о вызовах указателей функций)
 [Документация Microsoft - unmanaged (соглашение о вызовах указателей функций)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/unsafe-code#function-pointers)
