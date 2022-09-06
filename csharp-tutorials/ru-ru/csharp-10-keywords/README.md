@@ -474,10 +474,10 @@ var query = from emp in employees
 Указатель функции можно определить, используя ключевое слово delegate\*. Им можно определять с ключевыми словами **managed** или **unmanaged**. **unmanaged** используется для создания делегатов на не управляемый код.
 
 ### nameof
-[Документация Microsoft - nameof](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/nameof)
+Контекстное слово **nameof** предназначено для получения строковой константы имени, типа или элемента переменной.
 
 ### nint
-[Документация Microsoft - nint](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/integral-numeric-types)
+Представляет собой 32- или 64-разрядное целое число со знаком, является псевдонимом для *System.IntPtr*. 
 
 ### not (не)
 [Документация Microsoft - not (не)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/patterns#logical-patterns)
