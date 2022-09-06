@@ -556,27 +556,64 @@ var query = from emp in employees
 Указатель функции можно определить, используя ключевое слово **delegate\***. Их можно определять с ключевыми словами **managed** или **unmanaged**. **unmanaged** используется для создания делегатов на не управляемый код.
 
 ### unmanaged (ограничение универсального типа)
-[Документация Microsoft - unmanaged (ограничение универсального типа)](https://docs.microsoft.com/ru-ru/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters#unmanaged-constraint)
+Ограничение **unmanaged** пишут, чтобы указать, что аргумент типа является не управляемым типом.
+Пример:
+```cs
+unsafe public static byte[] GetData<T>(this T argument) where T : unmanaged
+{
+	// ...
+}
+```
 
 ### value
-[Документация Microsoft - value](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/value)
+Контекстное ключевое слово **value** используется в методе доступа set в объявлениях свойства и индексатора для получения присваемого значения.
 
 ### var
-[Документация Microsoft - var](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/var)
+Контекстное ключевое слово **var** используется для неявно типизированных пременных. Строгий тип для неявно типизированных переменных вычисляется на этапе компиляции.
+Пример:
+```cs
+var i = 0;
+```
 
 ### when (условие фильтра)
-[Документация Microsoft - when (условие фильтра)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/when)
+Для того, чтобы указать условие фильтра в следующих случаях, можно использовать контекстное ключевое слово **when**:
+
+- в операторе catch блоке try/catch/finally;
+- в качестве условия случая в операторе switch.
 
 ### where (ограничение универсального типа)
-[Документация Microsoft - where (ограничение универсального типа)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/where-generic-type-constraint)
+Контекстное ключевое слово **where** используется для указаний ограничений на универсальный тип.
 
 ### where (предложение запроса)
-[Документация Microsoft - where (предложение запроса)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/where-clause)
+Контекстное ключевое слово **where** используется в запросах LINQ для указания условия фильтра объектов.
+Пример:
+```cs
+IEnumerable<string> aNames =
+    from name in names
+    where name != null && name.Length > 0
+    where name[0] == 'A' || name[0] == 'a'
+    select name;
+```
 
 ### with
-[Документация Microsoft - with](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/with-expression)
+Контекстное ключевое слово **with** нужно для создания своего параметра с другими свойствами/полями.
+Пример:
+```cs
+public record Employee(int Id, int DepartmentId, string FirstName, string LastName);
+// ...
+var emp1 = new Employee(1, 1, "Иван", "Иванов");
+// ...
+var emp2 = emp1 with { Id = 2,  FirstName = "Пётр"};
+```
 
 ### yield
-[Документация Microsoft - yield](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/yield)
+Контекстное ключевое слово **yield** используется в методе, операторе или методе доступа **get** для того, чтобы наполнить коллекцию результата.
+Пример форм оператора:
+```cs
+// ...
+yield return <выражение>;
+// ...
+yield break;
+```
 
 
