@@ -611,7 +611,7 @@ var emp2 = emp1 with { Id = 2,  FirstName = "Пётр"};
 Пример форм оператора:
 ```cs
 // ...
-yield return <выражение>;
+yield return выражение;
 // ...
 yield break;
 ```
