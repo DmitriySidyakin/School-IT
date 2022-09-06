@@ -462,16 +462,16 @@ var query = from emp in employees
 В C# 9 и более поздних версий метод доступа к свойству или индексатору **init** используется для назначения нового значения только при создании объекта.
 
 ### into
-[Документация Microsoft - into](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/into)
+Контекстное слово **into** можно применять для создания временного идентификатора для сохранения результатов предложений **group**, **join** или **select** в новый идентификатор.
 
 ### join
-[Документация Microsoft - join](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/join-clause)
+Контекстное слово **join** нужно для создания связи между двумя коллекциями в запросах LINQ.
 
 ### let
-[Документация Microsoft - let](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/let-clause)
+Контекстное ключевое слово **let** используется в запросах LINQ для создания промежуточной переменной.
 
 ### managed (соглашение о вызовах указателей функций)
-[Документация Microsoft - managed (соглашение о вызовах указателей функций)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/unsafe-code#function-pointers)
+Указатель функции можно определить, используя синтаксический элемент delegate*.
 
 ### nameof
 [Документация Microsoft - nameof](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/nameof)
