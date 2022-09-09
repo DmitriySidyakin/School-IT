@@ -13,3 +13,7 @@
 	- [Руководство по программированию на C#](https://docs.microsoft.com/ru-ru/dotnet/csharp/programming-guide/)
 	- [Паттерны проектирования в C# и .NET](https://metanit.com/sharp/patterns/)
 	
+# Видео
+
+- Алгоритмы:
+	1. [Кривые Безье](https://youtu.be/e3QIiNBW4Uo)	
