@@ -16,4 +16,4 @@
 # Видео
 
 - Алгоритмы:
-	1. [Кривые Безье](https://youtu.be/e3QIiNBW4Uo)	
+	1. [Кривые Безье](https://youtu.be/-aaBzgcqQwY)	
