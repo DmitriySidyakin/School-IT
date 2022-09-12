@@ -1,3 +1,5 @@
+[Главная](https://dmitriysidyakin.github.io/CSharp-Tutorials/) >> [Алгоритмы](https://dmitriysidyakin.github.io/CSharp-Tutorials/csharp-articles/ru-ru/algorithms-on-csharp/)
+
 # Алгоритмы — Кривые Безье
 
 1. [Введение](#1-введение)
