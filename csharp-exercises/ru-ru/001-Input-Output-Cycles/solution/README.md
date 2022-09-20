@@ -113,7 +113,7 @@ for(int y = 0; y < 10 && notFound; y++)
             for (int r = 0; r < 10 && notFound; r++)
                 for (int k = 0; k < 10 && notFound; k++)
                 {
-                    if (k == 0 && d == 0 && a == 0 && r == 0 && k == 0)
+                    if (y == 0 && d == 0 && a == 0 && r == 0 && k == 0)
                         continue;
 
                     int ydar = y * 1000 + d * 100 + a * 10 + r;
