@@ -31,9 +31,9 @@
 	1. [Ввод-вывод в консольных приложениях и циклы](csharp-exercises/ru-ru/001-Input-Output-Cycles/)
 	2. (в процессе написания)
 2. Решения упражнений пункта 1:
-	1. [Ввод-вывод в консольных приложениях и циклы](csharp-exercises/ru-ru/001-Input-Output-Cycles/solution)
+	1. [Ввод-вывод в консольных приложениях и циклы](csharp-exercises/ru-ru/001-Input-Output-Cycles/solution/)
 	2. (в процессе написания)
-3. Сложные упражнения, без решения (в процессе написания)
+3. [Сложные упражнения, без решения](csharp-exercises/ru-ru/try-open-source/)
 
 # Приложения на C# с открытым исходным кодом (OpenSource)
 
