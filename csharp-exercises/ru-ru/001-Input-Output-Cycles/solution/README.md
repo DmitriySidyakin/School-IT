@@ -34,7 +34,7 @@ do
     Console.Write("Введите b: ");
 }
 while (!long.TryParse(Console.ReadLine(), out b));
-Console.WriteLine($"Сумма a и b = {a + b}");
+Console.WriteLine($"Сумма a и b: {a + b}");
 Console.ReadLine();
 ```
 
@@ -102,7 +102,20 @@ static long Factorial(int n)
 Решение на C#:
 
 ```cs
-Console.WriteLine("Ещё не готово");
+long N = -1;
+do
+{
+    Console.Write("Введите целое не отрицательное число: ");
+}
+while (!(long.TryParse(Console.ReadLine(), out N) && N >= 0));
+
+Console.WriteLine("Обратный порядок цифр: ");
+string stringN = N.ToString();
+for(int i = stringN.Length - 1; i >= 0; i--)
+    Console.Write(stringN[i]);
+
+Console.WriteLine();
+Console.ReadLine();
 ```
 
 ## Решение *Упражнения 6*
@@ -112,7 +125,15 @@ Console.WriteLine("Ещё не готово");
 Решение на C#:
 
 ```cs
-Console.WriteLine("Ещё не готово");
+long N = -1;
+do
+{
+    Console.Write("Введите целое не отрицательное число: ");
+}
+while (!(long.TryParse(Console.ReadLine(), out N) && N >= 0));
+
+Console.WriteLine($"Количество десятков: {N / 10}");
+Console.ReadLine();
 ```
 
 ## Решение *Упражнения 7*
@@ -122,17 +143,39 @@ Console.WriteLine("Ещё не готово");
 Решение на C#:
 
 ```cs
-Console.WriteLine("Ещё не готово");
+Console.WriteLine("Введите длины сторон прямоугольника a и b.");
+long a;
+do
+{
+    Console.Write("Введите a: ");
+}
+while (!long.TryParse(Console.ReadLine(), out a));
+long b;
+do
+{
+    Console.Write("Введите b: ");
+}
+while (!long.TryParse(Console.ReadLine(), out b));
+Console.WriteLine($"Площадь прямоугольника: {a * b}");
+Console.ReadLine();
 ```
 
 ## Решение *Упражнения 8*
 
-Пусть у нас есть целое число N. Выведите следующие чётное число за ним. При написании решения для этой задачи нельзя использовать условную инструкцию **if** и циклы.
+Пусть у нас есть целое положительное число N. Выведите следующие чётное число за ним. При написании решения для этой задачи нельзя использовать условную инструкцию **if** и циклы.
 
 Решение на C#:
 
 ```cs
-Console.WriteLine("Ещё не готово");
+long N = -1;
+do
+{
+    Console.Write("Введите целое положительное число: ");
+}
+while (!long.TryParse(Console.ReadLine(), out N));
+
+Console.WriteLine($"Целое чётное число следующее за ним: {(N / 2) * 2 + 2}");
+Console.ReadLine();
 ```
 
 ## Решение *Упражнения 9*
@@ -142,7 +185,23 @@ Console.WriteLine("Ещё не готово");
 Решение на C#:
 
 ```cs
-Console.WriteLine("Ещё не готово");
+Console.WriteLine("Введите переменную типа int: ");
+int @int = int.Parse(Console.ReadLine() ?? "");
+
+Console.WriteLine("Введите переменную типа char: ");
+char @char = char.Parse(Console.ReadLine() ?? "");
+
+Console.WriteLine("Введите переменную типа string: ");
+string @string = Console.ReadLine() ?? "";
+
+Console.WriteLine("Введите переменную типа float: ");
+float @float = float.Parse(Console.ReadLine() ?? "");
+
+Console.WriteLine("Вы ввели:");
+Console.WriteLine(@int);
+Console.WriteLine(@char);
+Console.WriteLine(@string);
+Console.WriteLine(@float);
 ```
 
 ## Решение *Упражнения 10*

@@ -10,5 +10,5 @@ do
     Console.Write("Введите b: ");
 }
 while (!long.TryParse(Console.ReadLine(), out b));
-Console.WriteLine($"Сумма a и b = {a + b}");
+Console.WriteLine($"Сумма a и b: {a + b}");
 Console.ReadLine();
