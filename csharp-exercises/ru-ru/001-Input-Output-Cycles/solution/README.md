@@ -22,7 +22,20 @@ Console.ReadLine();
 Решение на C#:
 
 ```cs
-Console.WriteLine("Ещё не готово");
+Console.WriteLine("Введите два целых числа a и b.");
+long a;
+do {
+    Console.Write("Введите a: ");
+}
+while (!long.TryParse(Console.ReadLine(), out a));
+long b;
+do
+{
+    Console.Write("Введите b: ");
+}
+while (!long.TryParse(Console.ReadLine(), out b));
+Console.WriteLine($"Сумма a и b = {a + b}");
+Console.ReadLine();
 ```
 
 ## Решение *Упражнения 3*
@@ -32,17 +45,54 @@ Console.WriteLine("Ещё не готово");
 Решение на C#:
 
 ```cs
-Console.WriteLine("Ещё не готово");
+Console.WriteLine("Введите N от 0 до 100.");
+
+long N = -1;
+do
+{
+    Console.Write("Введите N: ");
+}
+while (!(long.TryParse(Console.ReadLine(), out N) && N >= 0 && N <= 100));
+
+Console.WriteLine($"Числа от 0 до {N}: ");
+for (int i = 0; i <= N; i++)
+    Console.Write(i.ToString() + (i != N ? ", " : "\n"));
+
+Console.ReadLine();
 ```
 
 ## Решение *Упражнения 4*
 
-Сделайте ввод  целого числа N, от 0 (нуля) до 100 (ста). Сделайте вычисление факториала для числа N. Факториал числа N — это произведение всех целых чисел от него до 1. Факториал нуля равен 1.
+Сделайте ввод  целого числа N, от 0 (нуля) до 10 (десяти). Сделайте вычисление факториала для числа N. Факториал числа N — это произведение всех целых чисел от него до 1. Факториал нуля равен 1.
 
 Решение на C#:
 
 ```cs
-Console.WriteLine("Ещё не готово");
+Console.WriteLine("Введите N от 0 до 10.");
+
+int N = -1;
+do
+{
+    Console.Write("Введите N: ");
+}
+while (!(int.TryParse(Console.ReadLine(), out N) && N >= 0 && N <= 10));
+
+Console.WriteLine($"Факториал N: {Factorial(N)}");
+
+static long Factorial(int n)
+{
+    if (n == 0)
+        return 1;
+
+    long result = 1;
+
+    for (int i = 2; i <= n; i++)
+    {
+        result *= i;
+    }
+
+    return result;
+}
 ```
 
 ## Решение *Упражнения 5*
