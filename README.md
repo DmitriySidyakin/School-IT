@@ -13,7 +13,7 @@
 3. Статьи с примерами на C#:
 	- [Алгоритмы](csharp-articles/ru-ru/algorithms-on-csharp/README.md):
 		1. [Кривые Безье](csharp-articles/ru-ru/algorithms-on-csharp/articles/0001-Bezier-curves/README.md)
-		2. [Алгоритм нахождения кратчайшего пути в графе (в обычном, взвешенном, (дву)направленном)](csharp-articles/ru-ru/algorithms-on-csharp/articles/0002-Graphs/README.md]
+		2. [Алгоритм нахождения кратчайшего пути в графе (в обычном, взвешенном, (дву)направленном)](csharp-articles/ru-ru/algorithms-on-csharp/articles/0002-Graphs/README.md)
 4. Внешние учебники на русском:
 	- [Ключевые слова C#](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/)
 	- [Полное руководство по языку программирования С# 10 и платформе .NET 6](https://metanit.com/sharp/tutorial/)
