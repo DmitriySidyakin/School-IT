@@ -1,6 +1,6 @@
 [Главная](https://dmitriysidyakin.github.io/CSharp-Tutorials/) >> [Алгоритмы](https://dmitriysidyakin.github.io/CSharp-Tutorials/csharp-articles/ru-ru/algorithms-on-csharp/)
 
-# Алгоритмы — Алгоритм нахождения кратчайшего пути в графе (в обычном, взвешенном, (дву)направленном)
+# Алгоритмы — Алгоритм нахождения кратчайшего пути в графе (методом грубой силы)
 
 1. [Введение](#1-введение)
 	1. [Что такое граф?](#11-что-такое-граф)
