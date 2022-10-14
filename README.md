@@ -49,9 +49,9 @@
 
 # Программа ОГЭ и ЕГЭ по информатике
 
-1. [Программа ОГЭ и ЕГЭ](school-computer-science/ru-ru/school-topics/)
+1. [Программа ОГЭ и ЕГЭ (в процессе написания)](school-computer-science/ru-ru/school-topics/)
 2. (Список экзаменационных вопросов МГТУ им. Н. Э. Баумана) (в процессе написания)
-3. [Методы самообразования и саморазвития](school-computer-science/ru-ru/methods-of-self-education-and-self-development/)
+3. [Методы самообразования и саморазвития (в процессе написания)](school-computer-science/ru-ru/methods-of-self-education-and-self-development/)
 4. (в процессе написания)
 
 
