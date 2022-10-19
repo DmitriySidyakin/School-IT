@@ -49,7 +49,7 @@
 
 # Программа ОГЭ и ЕГЭ иформатика и ИКТ, математика, физика, русский язык
 
-[Методы самообразования и саморазвития (в процессе написания)](school-computer-science/ru-ru/methods-of-self-education-and-self-development/)
+[Методы самообразования и саморазвития (в процессе написания)](methods-of-self-education-and-self-development/ru-ru)
 
 ## Информатика и ИКТ
 
