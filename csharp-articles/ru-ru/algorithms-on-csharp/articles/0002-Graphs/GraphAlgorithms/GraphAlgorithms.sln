@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphAlgorithms", "GraphAlgorithms\GraphAlgorithms.csproj", "{1EBA537D-BBFD-450B-A3AE-BEB7B2F5ABDA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphAlgorithms.Tests", "GraphAlgorithms.Tests\GraphAlgorithms.Tests.csproj", "{0F186F83-60A1-44DD-B699-A1922481328A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EBA537D-BBFD-450B-A3AE-BEB7B2F5ABDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EBA537D-BBFD-450B-A3AE-BEB7B2F5ABDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EBA537D-BBFD-450B-A3AE-BEB7B2F5ABDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EBA537D-BBFD-450B-A3AE-BEB7B2F5ABDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F186F83-60A1-44DD-B699-A1922481328A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F186F83-60A1-44DD-B699-A1922481328A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F186F83-60A1-44DD-B699-A1922481328A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F186F83-60A1-44DD-B699-A1922481328A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {48B7C50C-F09A-49AB-8C0A-304338DA97DF}
+	EndGlobalSection
+EndGlobal
