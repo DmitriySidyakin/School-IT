@@ -16,7 +16,7 @@
 		2. [Алгоритм нахождения кратчайшего пути в графе (методом грубой силы)](csharp-articles/ru-ru/algorithms-on-csharp/articles/0002-Graphs/README.md)
 4. Внешние учебники на русском:
 	- [Ключевые слова C#](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/)
-	- [Полное руководство по языку программирования С# 10 и платформе .NET 6](https://metanit.com/sharp/tutorial/)
+	- [Полное руководство по языку программирования С# 11 и платформе .NET 7](https://metanit.com/sharp/tutorial/)
 	- [Руководство по программированию на C#](https://docs.microsoft.com/ru-ru/dotnet/csharp/programming-guide/)
 	- [Паттерны проектирования в C# и .NET](https://metanit.com/sharp/patterns/)
 	
