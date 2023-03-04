@@ -14,6 +14,7 @@
 	- [Алгоритмы](csharp-articles/ru-ru/algorithms-on-csharp/README.md):
 		1. [Кривые Безье](csharp-articles/ru-ru/algorithms-on-csharp/articles/0001-Bezier-curves/README.md)
 		2. [Алгоритм нахождения кратчайшего пути в графе (методом грубой силы)](csharp-articles/ru-ru/algorithms-on-csharp/articles/0002-Graphs/README.md)
+		3. [3D-графика на процессоре (Стереометрия в ортогональной проекции)](csharp-articles/ru-ru/algorithms-on-csharp/articles/0003-3D-on-CPU/README.md)
 4. Внешние учебники на русском:
 	- [Ключевые слова C#](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/)
 	- [Полное руководство по языку программирования С# 11 и платформе .NET 7](https://metanit.com/sharp/tutorial/)
