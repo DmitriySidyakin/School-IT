@@ -1,3 +1,5 @@
+[Главная](https://dmitriysidyakin.github.io/CSharp-Tutorials/)
+
 # Описание процесса установки шашек
 Вам понадобиться **Visual Studio Community 2022**
 1. Скачайте проект на GitHub (Стабильная версия проета на текущий момент [Chess 0.1](https://github.com/DmitriySidyakin/Chess/tree/Chess-0.1-whithout-Computer-Player))
