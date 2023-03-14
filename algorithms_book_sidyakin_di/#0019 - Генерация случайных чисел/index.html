@@ -1,0 +1,272 @@
+<html>
+<head>
+<title>Алгоритмы - Генерация случайных чисел</title>
+<link rel="stylesheet" type="text/css" href="../../css/main.css">
+</head>
+<body>
+<p>В статье приведены разные алгоритмы генерации случайных (псевдослучайных) чисел с примерами на языке программирования C#. В статье рассмотрены наиболее известные алгоритмы генерации случайных чисел.</p>
+<img src="../img/algorithms_logo_blogger.png"/>
+<h1>Алгоритмы - Генерация случайных чисел</h1>
+<ul class="noneVisibleMarkers">
+<li><a href="#Intro">1. Введение</a></li>
+<li><a href="#Rnd">2. Алгоритмы генерации псевдослучайных чисел</a>
+	<ul class="noneVisibleMarkers">
+		<li><a href="#Rnd-ComputationalMethods">2.1. Метод генерации случайных чисел вычислением (Computational Methods)</a></li>
+		<li><a href="#Rnd-XorShift">2.2. Метод получения случайных чисел побитовыми операциями (XorShift)</a></li>
+		<li><a href="#Rnd-System_Random">2.3. Виртуальный генератор (модель получения случайного байта) (System.Random)</a></li>
+	</ul>
+</li>
+<li><a href="#SourceCode">3. Исходный код</a>
+	<ul class="noneVisibleMarkers">
+		<li><a href="#Rnd-ComputationalMethods-Source">3.1. Метод генерации случайных чисел вычислением (Computational Methods)</a></li>
+		<li><a href="#Rnd-XorShift-Source">3.2. Метод получения случайных чисел побитовыми операциями (XorShift)</a></li>
+		<li><a href="#Rnd-System_Random-Source">3.3. Виртуальный генератор (модель получения случайного байта) (System.Random)</a></li>
+		<li><a href="#Rnd-Abstract-Source">3.4. Общие методы для всех генераторов</a></li>
+	</ul>
+</li>
+<li><a href="#Conclusion">4. Заключение</a></li>
+</ul>
+<h2 id="Intro">1. Введение</h2>
+<p>В статье далее рассмотрены три алгоритма для генерации псевдослучайных чисел. Представлено два метода, основанные на математических и побитовых операциях: <a href="#Rnd-ComputationalMethods">Метод генерации случайных чисел вычислением (Computational Methods)</a> и <a href="#Rnd-XorShift">Метод получения случайных чисел побитовыми операциями (XorShift)</a>. Последний третий алгорим показывает, как сгенирировать случайное число, если у Вас есть источник случайных байт (<a href="#Rnd-System_Random">Виртуальный генератор (модель получения случайного байта) (System.Random)</a>).</p>
+<p>Все примеры/описания алгоритмов демонстрируются на генерации псевдослучайного числа типа <i>long (64-битное целое)</i>. Метод для генерации настоящего числа называется <span><b>protected override long</b> <i>Next()</i></span>.</p>
+<p>Рассмотрим далее примеры реализации этого метода для всех трёх алгоритмов и дадим им объснение.</p>
+<h2 id="Rnd">2. Алгоритмы генерации случайных чисел</h2>
+<h3 id="Rnd-ComputationalMethods">2.1. Метод генерации случайных чисел вычислением (Computational Methods)</h3>
+<p>Алгоритм получения псевдослучайного числа с помощью вычислительных методов:</p>
+<div class="commands2"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">private long</span> _a = 23456781;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">private long</span> _b = 12323456781;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">private long</span> _mod = 56472311456;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">protected long</span> _seed = 5123;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">protected override long</span> Next()<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_seed = (_a * _seed + _b) % _mod;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">return</span> _seed;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>
+</div>
+<i>Алгоритм 1. Метод генерации случайных чисел вычислением (Computational Methods).</i>
+<p>Как видно из формулы <i>_seed = (_a * _seed + _b) % _mod</i> максимальное число не превышает <i>_mod-1</i>. Адаптируйте классы далее, чтобы генерировалось случайное число <b>long</b> с учётом этого факта, к примеру, генерируя его побайтово.</p>
+<p>Для переменных _a, _b, _mod, _seed установлено ограничение, что  0 &lt; _mod, 0 &lt; _a &lt; _mod, 0 &lt; _b &lt; _mod, _seed &lt; _mod (заимствовано из <a href="https://ru.wikipedia.org/wiki/%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80_%D0%BF%D1%81%D0%B5%D0%B2%D0%B4%D0%BE%D1%81%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D1%85_%D1%87%D0%B8%D1%81%D0%B5%D0%BB">https://ru.wikipedia.org/wiki/Генератор_псевдослучайных_чисел</a>).</p>
+<p>Дадим анимацию внутреннему состоянию переменных при генерации 10 псевдослучайных чисел:</p>
+<p><img src="ComputationalMethodsSample.gif"/></p>
+<i>Анимация 1. 10 проходов по методу генерации случайных чисел вычислением (Computational Methods).</i>
+<h3 id="Rnd-XorShift">2.2. Метод получения случайных чисел побитовыми операциями (XorShift)</h3>
+<p>Алгоитм получения псевдослучайного числа на основе побитовых операций:</p>
+<div class="commands2"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">private ulong</span> _x = 123; <i>// начальные значения могут быть другими</i><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">private ulong</span> _y = 456;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">private ulong</span> _z = 789;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">private ulong</span> _w = 768;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">protected long</span> _seed = (<span class="blue">long</span>)_w;<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">protected override long</span> Next()<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">ulong</span> t = _x ^ (_x &lt;&lt; 11);<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_x = _y;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_y = _z;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_z = _w;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_w = (_w ^ (_w &gt;&gt; 19)) ^ (t ^ (t &gt;&gt; 8));<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_seed = (<span class="blue">long</span>)_w;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">return</span> _seed;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>	
+</div>
+<i>Алгоритм 2. Метод получения случайных чисел побитовыми операциями (XorShift).</i>
+<p>Данный алгоритм реализован на побитовых сдвигах и побитовом исключающем "или".</p>
+<p>Дадим анимацию внутреннему состоянию переменных при генерации 10 псевдослучайных чисел:</p>
+<p><img src="XorShiftSample.gif"/></p>
+<i>Анимация 2. 10 проходов по методу получения случайных чисел побитовыми операциями (XorShift).</i>
+<h3 id="Rnd-System_Random">2.3. Виртуальный генератор (модель получения случайного байта) (System.Random)</h3>
+<p>Алгоитм получения псевдослучайного числа с помощью получения байт из случайного источника. Можно брать за алгоритм случайный доступ к оперативной памяти, но это не поддерживает C#, в алгоритме далее функция получения случайных байт заменена на получение псевдослучайных байт с помощью класса C# System.Random:</p>
+<div class="commands2"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">protected long</span> _seed = 5123;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;System.Random random = <span class="blue">new</span> System.Random(_seed);<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">protected override long</span> Next()<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">byte</span>[] rnd = <span class="blue">new byte</span>[<span class="blue">sizeof</span>(<span class="blue">long</span>)];<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;random.NextBytes(rnd);<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">long</span> result = 0;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">for</span>(<span class="blue">int</span> i = <span class="blue">sizeof</span>(<span class="blue">long</span>) - 1; i >= 0; i--)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">byte</span> rndByte = rnd[i];<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = result ^ rndByte;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result &lt;&lt;= i * 8;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_seed = result;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">return</span> _seed;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>
+</div>
+<i>Алгоритм 3. Виртуальный генератор (модель получения случайного байта)(System.Random).</i>
+<p>Алгоритм основан на том, что случайный байт как-то можно получить.</p>
+<h2 id="SourceCode">3. Исходный код</h2>
+<p>Исходный код этих генераторов доступен на <a href="https://github.com/DmitriySidyakin/Blog-Random/tree/release-1-2-1">GitHub.com</a>. Код псевдослучайных генераторов представлен далее и дополнен описанием того, что в нём представлено ранее.</p>
+<h3 id="Rnd-ComputationalMethods-Source">3.1. Метод генерации случайных чисел вычислением (Computational Methods)</h3>
+<p>Исходный код для <a href="#Rnd-ComputationalMethods">Метода генерации случайных чисел вычислением (Computational Methods)</a>:</p>
+<div class="commands2"><br/>
+<span class="blue">namespace</span> Blog_Random.Random<br/>
+{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">public class</span> RandomComputationalMethods : Random<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">private long</span> _a = 23456781;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">private long</span> _b = 12323456781;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">private long</span> _mod = 56472311456;<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">public</span> RandomComputationalMethods(<span class="blue">long</span> seed)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_seed = seed;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">protected override</span> long Next()<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_seed = (_a * _seed + _b) % _mod;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">return</span> _seed;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+}<br/><br/>
+</div>
+<i>Исходный файл "RandomComputationalMethods.cs".</i>
+<h3 id="Rnd-XorShift-Source">3.2. Метод получения случайных чисел побитовыми операциями (XorShift)</h3>
+<p>Исходный код для <a href="#Rnd-XorShift">Метода получения случайных чисел побитовыми операциями (XorShift)</a>:</p>
+<div class="commands2"><br/>
+<span class="blue">namespace</span> Blog_Random.Random<br/>
+{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">public class</span> RandomXorShift : Random<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">private ulong</span> _x = 123; <i>// начальные значения могут быть другими</i><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">private ulong</span> _y = 456;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">private ulong</span> _z = 789;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">private ulong</span> _w = 768;<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">public</span> RandomXorShift(<span class="blue">ulong x</span>, <span class="blue">ulong</span> y, <span class="blue">ulong</span> z, <span class="blue">ulong</span> w)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_x = x;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_y = y;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_z = z;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_w = w;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_seed = (<span class="blue">long</span>)_w;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">public</span> RandomXorShift() { _seed = (<span class="blue">long</span>)_w; }<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">protected override long</span> Next()<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">ulong</span> t = _x ^ (_x &lt;&lt; 11);<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_x = _y;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_y = _z;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_z = _w;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_w = (_w ^ (_w &gt;&gt; 19)) ^ (t ^ (t &gt;&gt; 8));<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_seed = (<span class="blue">long</span>)_w;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">return</span> _seed;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+}<br/><br/>
+</div>
+<i>Исходный файл "RandomXorShift.cs".</i>
+<h3 id="Rnd-System_Random-Source">3.3. Виртуальный генератор (модель получения случайного байта) (System.Random)</h3>
+<p>Исходный код для <a href="#Rnd-System_Random">Виртуального генератора (модели получения случайного байта)(System.Random)</a>:</p>
+<div class="commands2"><br/>
+<span class="blue">namespace</span> Blog_Random.Random<br/>
+{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">public class</span> RandomFromSystem : Random<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.Random random;<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">public</span> RandomFromSystem() { random = <span class="blue">new</span> System.Random(); _seed = Next(); }<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">public</span> RandomFromSystem(<span class="blue">int</span> seed) { random = <span class="blue">new</span> System.Random(seed); _seed = Next(); }<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">protected override long</span> Next()<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">byte</span>[] rnd = <span class="blue">new byte</span>[<span class="blue">sizeof</span>(<span class="blue">long</span>)];<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;random.NextBytes(rnd);<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">long</span> result = 0;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">for</span>(<span class="blue">int</span> i = <span class="blue">sizeof</span>(<span class="blue">long</span>) - 1; i &gt;= 0; i--)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">byte</span> rndByte = rnd[i];<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = result ^ rndByte;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result &lt;&lt;= i * 8;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_seed = result;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">return</span> _seed;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+}<br/><br/>
+</div>
+<i>Исходный файл "RandomFromSystem.cs".</i>
+<h3 id="Rnd-Abstract-Source">3.4. Общие методы для всех генераторов</h3>
+<p>В данном разделе представлен абстакный класс, который является вспомогательным, если Вам нужен не только случайное число <span class="blue">long</span>, но и другие типы данных. Для его работы достаточно создать метод Next() в классе потомке, как в примерах исходного кода ранее.</p>
+<p>Далее приведён класс, который реализует базовые необходимые методы для частовстречаемой генерации псевдослучайности.</p>
+<div class="commands2"><br/>
+<span class="blue">using</span> System;<br/>
+<br/>
+<span class="blue">namespace</span> Blog_Random.Random<br/>
+{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">public abstract class</span> Random<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">protected long</span> _seed;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">private byte</span> _currentBytePosition = 8;<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">protected abstract long</span> Next();<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">public long</span> RandomLong() =&gt; Next();<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">public byte</span> RandomByte()<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">if</span> (_currentBytePosition == 8)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Next();<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_currentBytePosition = 0;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">byte</span> randomByte = (<span class="blue">byte</span>)((_seed &gt;&gt; _currentBytePosition) & 0xFF);<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_currentBytePosition++;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">return</span> randomByte;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">public double</span> RandomDouble()<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">return</span> BitConverter.ToDouble(<span class="blue">new</span> byte[8] { RandomByte(), RandomByte(), RandomByte(), RandomByte(), RandomByte(), RandomByte(), RandomByte(), RandomByte() });<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">public double</span> RandomDoubleBetweenOne()<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">return</span> BitConverter.ToDouble(<span class="blue">new</span> byte[8] { RandomByte(), RandomByte(), RandomByte(), RandomByte(), RandomByte(), RandomByte(), (byte)(RandomByte() & 0b0001_1111), 0 }) / RandomDoubleBitOne();<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">private double</span> RandomDoubleBitOne()<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">return</span> BitConverter.ToDouble(<span class="blue">new byte</span>[8] { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0b0001_1111, 0 });<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">public long</span> RandomLongBetweenInt(<span class="blue">int</span> min, <span class="blue">int</span> max)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">return</span> min + (<span class="blue">long</span>) Math.Round(((<span class="blue">long</span>)max - (<span class="blue">long</span>)min) * RandomDoubleBetweenOne(), 0);<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+}<br/><br/>
+</div>
+<i>Исходный файл "Random.cs".</i>
+<p>Краткое описание членов класса:</p>
+<ul>
+	<li><span style="color: blue;font-weight: bolder;">protected long</span> _seed &mdash; "зерно" псевдослучайной последовательности.</li>
+	<li><span style="color: blue;font-weight: bolder;">private byte</span> _currentBytePosition &mdash; текущая позиция для генерации/получения случайного байта в "зерне".</li>
+	<li><span style="color: blue;font-weight: bolder;">protected abstract long</span> Next() &mdash; Абстактный метод для определения его потомками. Он предназначен для получения следующего псевдослучайного числа из последовательности.</li>
+	<li><span style="color: blue;font-weight: bolder;">public long</span> RandomLong() &mdash; Метод для получения псевдослучайного числа типа <span style="color: blue;font-weight: bolder;">long</span>.</li>
+	<li><span style="color: blue;font-weight: bolder;">public byte</span> RandomByte() &mdash; Метод для получения псевдослучайного числа типа <span style="color: blue;font-weight: bolder;">byte</span>.</li>
+	<li><span style="color: blue;font-weight: bolder;">public double</span> RandomDouble() &mdash; Метод для получения псевдослучайного числа типа <span style="color: blue;font-weight: bolder;">double</span>.</li>
+	<li><span style="color: blue;font-weight: bolder;">public double</span> RandomDoubleBetweenOne() &mdash; Метод для получения псевдослучайного числа типа <span style="color: blue;font-weight: bolder;">double</span> от нуля до единицы включительно. </li>
+	<li><span style="color: blue;font-weight: bolder;">private double</span> RandomDoubleBitOne() &mdash; Вспомогательный метод для метода RandomDoubleBetweenOne(), для приведения типа <span style="color: blue;font-weight: bolder;">double</span> к значениям от нуля до единицы.</li>
+	<li><span style="color: blue;font-weight: bolder;">public long</span> RandomLongBetweenInt(<span style="color: blue;font-weight: bolder;">int</span> min, <span style="color: blue;font-weight: bolder;">int</span> max) &mdash; Метод для получения псевдослучайного числа типа <span style="color: blue;font-weight: bolder;">long</span> из заданного диапазона типом данных <span style="color: blue;font-weight: bolder;">int</span>.</li>
+</ul>
+<h2 id="Conclusion">4. Заключение</h2>
+<p>Главное не копируйте приведенные здесь примеры в свой код, подберите свои коэффициенты алгоритмам, протестируйте их и переделайте. Приведённые в статье примеры даны для объяснения концепции генерации псевдослучайных чисел. Приведённая в статье реализация не является криптостойкой, она рассмотрена для того, чтобы Вы смогли получить свою реализацию <a href="https://github.com/DmitriySidyakin/Blog-Random/tree/release-1-2-1">GitHub.com</a> или пользоваться готовыми генераторами случайных числел языка программирования.</p>
+<p>Вы можете смело пользоваться генераторами псевдослучайных чисел, которые встроены в Ваш язык программирования. Данные алгоритмы помогут Вам, если вы пишите свои типы данных, в которых не возможно пользовать генерацией случайных чисел встроенных в язык программирования или это не удобно.</p>
+<p>Если у Вас есть время или нечем занятся, то Вы можете поисследовать эти алгоритмы, проделать их руками, пройтись отладкой, написать тесты и визуализацию.</p>
+<p>Также Вы можете придумать свои алгоритмы для генерации псевдослучайных значение, основанные на переполнении разрядной сетки, математических операциях, побитовых операциях, комбинаторикой переменных и т.д.</p>
+</body>
+</html>

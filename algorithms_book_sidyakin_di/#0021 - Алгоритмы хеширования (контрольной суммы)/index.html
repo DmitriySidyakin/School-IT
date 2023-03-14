@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>Алгоритмы - Алгоритмы хеширования (контрольной суммы)</title>
+<link rel="stylesheet" type="text/css" href="../../css/main.css">
+</head>
+<body>
+<p>Статья рассказывает концепцию алгоритма вычисления контрольной суммы (хеширования).</p>
+<img src="../img/algorithms_logo_blogger.png"/>
+<h1>Алгоритмы - Алгоритмы хеширования (контрольной суммы)</h1>
+<ul class="noneVisibleMarkers">
+<li><a href="#Intro">1. Введение</a></li>
+<li><a href="#HashSample">2. Пример простейшего алгоритма нахождения контрольной суммы
+	<ul class="noneVisibleMarkers">
+	<li><a href="#HashSampleDescription">2.1. Описание алгоритма</a></li>
+	<li><a href="#HashSampleCSharp">2.2. Пример кода алгоритма на языке C#</a></li>
+	<li><a href="#HashSampleJava">2.3. Пример кода алгоритма на языке Java</a></li>
+	</ul>
+</li>
+<li><a href="#Conclusion">3. Заключение</a></li>
+</ul>
+<h2 id="Intro">1. Введение</h2>
+<p>Алгоритмы нахождения контрольной суммы данных (объекта) предназначены для того, чтобы дать данным более короткое представление для их сопоставления. При этом сопоставлении происходит потеря количества информации и возможны коллизии. Колизия &mdash; это, когда два и более разных объекта имеют одно значение котрольной суммы (хеша).</p>
+<p>Для избежания воздействия коллизий при нахождении определённого элемента в коллекции его можно искать по хешу, но при этом поиске возможно найти два и более одинаковых объекта. Уже найденные объекты с одинаковой контрольной суммой можно сравнивать на эквивалентность.</p>
+<h2 id="HashSample">2. Пример простейшего алгоритма нахождения контрольной суммы</h2>
+<p>В данном разделе приведён пример алгоритма нахождения контрольной суммы для строки текста. Но не забывайте, что алгоритм нахождения контрольной суммы в основном находится для бинарных данных или просто больших данных.</p>
+<h3 id="HashSampleDescription">2.1. Описание алгоритма</h3>
+<p>Алгоритм основан на том, что:
+<ul class="noneVisibleMarkers">
+	<li>1. дана входная строка <i>str</i>, значение контрольной суммы храниться в целочисленной переменной <i>hashSum</i>;</li>
+	<li>2. в начале переменная <i>hashSum</i> равна 0 (нулю);</li>
+	<li>3. для нахождения котрольной суммы к переменной <i>hashSum</i> добавляется код каждого символа входной строки <i>str</i> последовательно.</li>
+</ul></p>
+<p></p>
+<p>Далее приводится реализация этого алгоритма на языках программирования C# и Java.</p>
+<h3 id="HashSampleCSharp">2.2. Пример кода алгоритма на языке C#</h3>
+<p>Пример алгоритмы получения контрольной суммы на C#:</p>
+<div class="commands2"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">static public long</span> HashCodeSample(<span class="blue">string</span> str)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">long</span> hashSum = 0;<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">foreach</span> (<span class="blue">var</span> chr <span class="blue">in</span> str)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hashSum += (<span class="blue">long</span>)chr;<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">return</span> hashSum;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>
+</div>
+<h3 id="HashSampleJava">2.3. Пример кода алгоритма на языке Java</h3>
+<p>Пример алгоритмы получения контрольной суммы на Java:</p>
+<div class="commands2"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">public static long</span> HashCodeSample(String str) {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">long</span> hashSum = 0;<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">for</span>(<span class="blue">int</span> i = 0; i < str.length(); i++) {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hashSum += (<span class="blue">long</span>)str.charAt(i);<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">return</span> hashSum;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>
+</div>
+<h2 id="Conclusion">3. Заключение</h2>
+<p>В заключение могу вам пожелать написание своих методов для вычисления контрольной суммы, как собственных алгоритмов, так и стандартов. Не забывайте развиваться!</p>
+</body>
+</html>

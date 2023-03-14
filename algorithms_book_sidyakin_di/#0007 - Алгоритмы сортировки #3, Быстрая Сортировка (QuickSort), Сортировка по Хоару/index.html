@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Алгоритмы - Алгоритмы сортировки #3, Быстрая Сортировка (QuickSort), Сортировка по Хоару</title>
+<link rel="stylesheet" type="text/css" href="../../css/main.css">
+</head>
+<body>
+<p>
+Статья посвящена алгоритму Быстрой Сортировки или Сортировке по Хоару, в ней подробно описывается алгоритм с детальным разбором. Он не особо отличается от тех, которые Вы изучали ранее. Сложность его максимального случая такая же, что и у других алгоритмов сортировки, но он представляет ценность, тем что массив фрагментируем.
+</p>
+<img src="../img/algorithms_logo_blogger.png"/>
+<h1>Алгоритмы - Алгоритмы сортировки #3, Быстрая Сортировка (QuickSort), Сортировка по Хоару.</h1>
+<ul class="noneVisibleMarkers">
+<li><a href="#History">1. История.</a></li>
+<li><a href="#FiEx">2. Первое объяснение.</a></li>
+<li><a href="#SeEx">3. Второе объяснение.</a></li>
+<li><a href="#TiEx">4. Третье объяснение.</a></li>
+<li><a href="#Conclusion">5. Заключение.</a></li>
+</ul>
+<h2 id="History">1. История.</h2>
+<p>Быстрая Сортировка разработана английским информатиком Чарльзом Хоаром во время его работы в МГУ в 1960 году. Сэр Чарльз Энтони Ричард Хоар родился 11 января 1934 года в Шри-Ланка.</p>
+<h2 id="FiEx">2. Первое объяснение.</h2>
+<p>Сам алгоритм довольно прост: Сначала берём любой элемент массива, к примеру последний, располагаем слева от него элементы меньше его, а справа от него &mdash; больше или равно. Повторяем алгоритм для левой и правой части, не включая тот самый элемент. Это алгоритм сортировки от меньшего к большему. Рассмотрим идею одного шага далее на рисунке:</p>
+<img src="img/quick_sorting.png" >
+<p><i>Рис. 1. Пример расположения элементов в быстрой сортировке.</i></p>
+<p>Далее более подробно формализуем алгоритм.</p>
+<h2 id="SeEx">3. Второе объяснение.</h2>
+<p>Сам алгоритм состоит из двух частей: разбиения на две части и рекурсии вызова самого себя для разбиений.</p>
+<p>Алгоритм разбиения (partition) выглядит так (от меньшего к большему):</p>
+<p><ul class="noneVisibleMarkers">
+<li><b>Входные данные</b>: arr &mdash; массив для сортировки, low &mdash; нижний индекс элемента массива, high &mdash; индекс последнего элемента.</li>
+<li>1. Получаем значение последнего элемента и сохраняем в переменную x.</li>
+<li>2. Устанавливаем i = (Индекс наименьшего элемента) - 1.</li>
+<li>3. Запускаем цикл от j = (Индекс наименьшего элемента) до предпоследнего включительно:
+<ul class="noneVisibleMarkers">
+<li>3.1. Если arr[j] &lt;= x, то:
+<ul class="noneVisibleMarkers">
+<li>3.1.1. Увеличиваем i на единицу.</li>
+<li>3.1.2. Обмениваем местами arr[i] и arr[j].</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>4. Обмениваем местами arr[i+1] и arr[high].</li>
+<li>5. Возвращаем i + 1.</li>
+<li><b>Выходные данные</b>: Средний элемент, слева от которого все элементы меньше которого, справа &mdash все элементы больше или равны среднему.</li>
+</ul></p>
+<p>Алгоритм сортировки (QuickSort) выглядит следующим образом:</p>
+<p><ul class="noneVisibleMarkers">
+<li><b>Входные данные</b>: arr &mdash; массив для сортировки, low &mdash; нижний индекс элемента массива, high &mdash; индекс последнего элемента.</li>
+<li>1. Если в массиве более одного элемента, то:
+<ul class="noneVisibleMarkers">
+<li>1.1. Располагаем все элемента больше или равные справа последнего элемента, меньше - слева и вычисляем позицию новой середины.</li>
+<li>1.2. Запускаем алгоритм рекурсивно для левой части.</li>
+<li>1.3. Запускаем алгоритм рекурсивно для правой части.</li>
+</ul>
+</li>
+</ul></p>
+<p>Приведём реализацию быстрой сортировки на языке Java:</p>
+<p>Разделение:</p>
+<p><div class="commands">
+/**<br/>
+&nbsp;* Метод для разбиения массива на две части и вычисления середины разбиения.<br/>
+&nbsp;* @param arr Сортируемый массив.<br/>
+&nbsp;* @param low Минимальный индекс в массиве.<br/>
+&nbsp;* @param high Максимальный индекс в массиве.<br/>
+&nbsp;* @return Индекс середины разбиения.<br/>
+&nbsp;*/<br/>
+private static int partition(ArrayList&lt;Integer&gt; arr, int low, int high) {<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;// 1. Получаем значение последнего элемента и сохраняем в переменную x.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Integer x = arr.get(high);<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;// 2. Устанавливаем i = (Индекс наименьшего элемента) - 1.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;int i = low - 1;<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;// 3. Запускаем цикл от j = (Индекс наименьшего элемента) до предпоследнего включительно:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;for(int j = low; j &lt; high; j++) {<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 3.1. Если arr[j] &lt;= x, то:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(arr.get(j) &lt;= x) {<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 3.1.1. Увеличиваем i на единицу.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i = i + 1;<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 3.1.2. Обмениваем местами arr[i] и arr[j].<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Integer temp = arr.get(i);<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arr.set(i, arr.get(j));<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arr.set(j, temp);<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;// 4. Обмениваем местами arr[i+1] и arr[high].<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Integer temp = arr.get(high);<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;arr.set(high, arr.get(i+1));<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;arr.set(i+1, temp);<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;// 5. Возвращаем i + 1.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;return i + 1;<br/>
+}
+</div></p>
+<p>Быстрая сортировка:</p>
+<p><div class="commands">
+/**<br/>
+&nbsp;* Метод быстрой сортировки.<br/>
+&nbsp;* @param arr Сортируемый массив.<br/>
+&nbsp;* @param low Минимальный индекс в массиве.<br/>
+&nbsp;* @param high Максимальный индекс в массиве.<br/>
+&nbsp;*/<br/>
+private static void quickSort(ArrayList&lt;Integer&gt; arr, int low, int high) {<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;// 1. Если в массиве более одного элемента, то:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;if(low &lt; high) {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 1.1. Располагаем все элемента больше или равные справа последнего элемента, меньше - слева и вычисляем позицию новой середины.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int p = partition(arr, low, high);<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 1.2. Запускаем алгоритм рекурсивно для левой части.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quickSort(arr, low, p - 1);<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 1.3. Запускаем алгоритм рекурсивно для правой части.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quickSort(arr, p + 1, high);<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+<br/>
+}
+</div></p>
+<h2 id="TiEx">4. Третье объяснение.</h2>
+<p>В данном разделе приведены блок-схемы алгоритма.</p>
+<p>Блок-схема алгоритма разбиения:</p>
+<p><img src="img/bs_partition.png" /></p>
+<p><i>Рис. 2. Блок-схема алгоритма разбиения.</i></p>
+<p>Блок-схема алгоритма быстрой сортировки:</p>
+<p><img src="img/bs_quick_sort.png" /></p>
+<p><i>Рис. 3. Блок-схема алгоритма быстрой сортировки.</i></p>
+<h2 id="Conclusion">5. Заключение.</h2>
+<p>Как вы видите это простой алгоритм, что следует взять за пример - способ разбиения данных целого массива на две независимые части.</p>
+<p><div class="information"><p>В статье приведена сортировка от меньшего к большему. Сделайте сортировку от большего к меньшему самостоятельно.</p></div></p>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>Алгоритмы - Концепция симметричных алгоритмов шифрования</title>
+<link rel="stylesheet" type="text/css" href="../../css/main.css">
+</head>
+<body>
+<p>В статье описана начальная концепция симметричных алгоритмов шифрования. В статье рассмотрены основы, что такое симметричное шифрование на примере побитовой операции Xor.</p>
+<img src="../img/algorithms_logo_blogger.png"/>
+<h1>Алгоритмы - Концепция симметричных алгоритмов шифрования</h1>
+<ul class="noneVisibleMarkers">
+<li><a href="#Intro">1. Введение</a></li>
+<li><a href="#XorSample">2. Пример реализации концепции шифрования на побитовой опереации XOR (Исключающее Или)</a>
+</li>
+<li><a href="#SymmetricEncryptionAlgorithms">3. Известные алгоритмы симметричного шифрования на текущий день (основные)</a>
+<li><a href="#Conclusion">4. Заключение</a></li>
+</ul>
+<h2 id="Intro">1. Введение</h2>
+<p>Шифрование &mdash; сокрытие данных от посторонних лиц. Алгоритм шифрования предназначен именно для этого.</p>
+<p>В шифровании данных используется ключ шифрования. Он представляет собой тоже самое, что и ключ от квартиры, или сундучка, или сейфа. </p>
+<p>Виды алгоритмов шифрования:
+<ul>
+<li>Симметричные &mdash; это алгоритмы, в которых используется один и тот же ключ для шифрования данных и расшифрования данных.</li>
+<li>Асимметричные &mdash; это алгоритмы, в которых один ключ используется для шифрования данных, другой для расшифрования.</li>
+</ul>
+</p>
+<img src="sa.png"/>
+<p></p>
+<h2 id="XorSample">2. Пример реализации концепции шифрования на побитовой опереации XOR (Исключающее Или)</h2>
+<p>Давайте рассмотрим алгоритм шифрования строки <b>data</b> ключом <b>key</b>.</p>
+<p>Чтобы строка стала зашифрованной к каждому символу <b>data</b> (строка) применяется соответствующий символ <b>key</b> (ключ) побитовой операцией "исключающее или". В результате получается зашифрованная строка для передачи (или другова использования. Теперь она является зашифрованной. Чтобы её расшифровать применяется тот же алгоритм с тем же ключом. Расшифрация происходит, т.к. алгоритм работает так: data <i>Xor</i> key <i>Xor</i> key, key <i>Xor</i> key = 0 (равно нулю) по определению побитовой операции исключающего или, а data <i>Xor</i> 0 равно data.</p>
+<p>Ключ для всех симметричных алгоритмов шифрования должен хранится в тайне.</p>
+<p>Приведём функцию на языке C# для симметричного шифрования, основанной на побитовой операции Xor:</p>
+<div class="commands2"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">public static string</span> XorSample(<span class="blue">string</span> data, <span class="blue">string</span> key)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">if</span> (String.IsNullOrEmpty(data) || String.IsNullOrEmpty(key))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">return</span> data;<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StringBuilder sb = <span class="blue">new</span> StringBuilder();<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">for</span> (<span class="blue">int</span> i = 0; i < data.Length; i++)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append((<span class="blue">char</span>)(data[i] ^ key[(i % key.Length)]));<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String result = sb.ToString();<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">return</span> result;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+</div>
+<p>Далее приведём код для тестирования этой функции:</p>
+<div class="commands2"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">using</span> System;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">using</span> System.Text;<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">namespace</span> Blog_SymmetricEncryptionAlgorithms_XorSample<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">class</span> Program<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">static void</span> Main(<span class="blue">string</span>[] args)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("Symmetric Encryption Algorithms: XorSample");<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("__________________________________________");<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">string</span> data = "The string is for a xor encryption test.";<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">string</span> key = "sadnfh283ursdf";<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine($"data: {data}");<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine($"key: {key}");<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine($"encrypted data : {XorSample(data, key)}");<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine($"decrypted data: {XorSample(XorSample(data, key), key)}");<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.ReadLine();<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">public static string</span> XorSample(<span class="blue">string</span> data, <span class="blue">string</span> key)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">if</span> (String.IsNullOrEmpty(data) || String.IsNullOrEmpty(key))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">return</span> data;<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StringBuilder sb = <span class="blue">new</span> StringBuilder();<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">for</span> (<span class="blue">int</span> i = 0; i < data.Length; i++)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append((<span class="blue">char</span>)(data[i] ^ key[(i % key.Length)]));<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String result = sb.ToString();<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">return</span> result;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;}
+</div>
+<p>Результат работы:</p>
+<p><img src="xor.png" /></p>
+<p>Рис. 1. Результат работы Xor-шифрования строк.</p>
+<h2 id="SymmetricEncryptionAlgorithms">3. Известные алгоритмы симметричного шифрования на текущий день (основные)</h2>
+<p>Конкретные алгоритмы симметричного шифрования вы можете найти в интернете или в профильной литературе, допустим посетите Политехническую библиотеку на Лубянке, там находится большое собрание технической литературы.</p>
+<h2 id="Conclusion">4. Заключение</h2>
+<p>В заключение я могу вам пожелать успехов в карьере, в обучении и криптографии, развивайте свои знания дальше. Желаю успехов!</p>
+</body>
+</html>

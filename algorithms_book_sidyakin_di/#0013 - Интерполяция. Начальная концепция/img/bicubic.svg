@@ -1,0 +1,67 @@
+<parent xmlns="https://designermanuals.blogspot.com/">
+    <!-- (c) Дмитрий Игоревич Сидякин, 2020, Интерполяция дублированием -->
+    <svg xmlns='http://www.w3.org/2000/svg'
+		  width="836" height="501px" version="1.1">
+  <desc>An example that references coordinate data.</desc>
+
+		<g stroke="orange" >
+
+		</g>
+		<g stroke="grey">
+
+		</g>
+		<g stroke="black" transform="skewX(30)">
+
+			<!-- Рисуем сетку -->
+			
+			
+			<rect x="28" y="78" width="50" height="50"
+				fill="none" stroke-width="1"/>
+			<rect x="78" y="78" width="50" height="50"
+				fill="none" stroke-width="1"/>
+			<rect x="128" y="78" width="50" height="50"
+				fill="none" stroke-width="1"/>
+				
+			<rect x="28" y="128" width="50" height="50"
+				fill="none" stroke-width="1"/>
+			<rect x="78" y="128" width="50" height="50"
+				fill="none" stroke-width="1"/>
+			<rect x="128" y="128" width="50" height="50"
+				fill="none" stroke-width="1"/>
+			
+			
+			<rect x="28" y="178" width="50" height="50"
+				fill="none" stroke-width="1"/>
+			<rect x="78" y="178" width="50" height="50"
+				fill="none" stroke-width="1"/>
+			<rect x="128" y="178" width="50" height="50"
+				fill="none" stroke-width="1"/>
+		</g>
+		<g stroke="green" >
+            <line x1="123.5" y1="78" x2="123.5" y2="58"
+				stroke-width="5" />
+		    <line x1="152" y1="128" x2="152" y2="54.74"
+				stroke-width="5" />
+			<line x1="180.5" y1="178" x2="180.5" y2="158"
+				stroke-width="5" />
+			<line x1="209" y1="228" x2="209" y2="154.74"
+				stroke-width="5" />
+		</g>
+		<g stroke="orange" >
+		    <line x1="173.5" y1="78" x2="173.5" y2="28"
+				stroke-width="5" />
+			<line x1="202" y1="128" x2="202" y2="100"
+				stroke-width="5" />
+			<line x1="230.5" y1="178" x2="230.5" y2="128"
+				stroke-width="5" />
+			<line x1="259" y1="228" x2="259" y2="200"
+				stroke-width="5" />
+		</g>
+		<text x="28" y="222.5" 
+        font-family="Verdana" font-size="16" fill="black" >
+			
+
+		</text>
+
+    </svg>   
+</parent>

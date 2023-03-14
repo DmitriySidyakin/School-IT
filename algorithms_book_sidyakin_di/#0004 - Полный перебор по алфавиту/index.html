@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Алгоритмы - Полный перебор по алфавиту</title>
+<link rel="stylesheet" type="text/css" href="../../css/main.css">
+</head>
+<body>
+<p>
+Статья рассматривывает алгоритм перебора по алфавиту. Статья является основой для классов программ для Полного перебора по алфавиту и с его использованием. Полный перебор по алфавиту представляет собой выдачу строк от начальной позиции до конечной из символов, заданных в начальном алфавите. Приведены примеры реализации на языке Java.
+Перебирать так же можно не только строковые значения, но и другие типы данных.</p>
+<img src="../img/algorithms_logo_blogger.png"/>
+<h1>Алгоритмы - Полный перебор по алфавиту.</h1></body>
+<ul class="noneVisibleMarkers">
+<li><a href="#Description">1. Описание алгоритма.</a></li>
+<li><a href="#BlockScheme">2. Блок-схема алгоритма.</a>
+<ul class="noneVisibleMarkers">
+<li><a href="#BlockScheme1">2.1. Блок-схема конструктора.</a></li>
+<li><a href="#BlockScheme2">2.2. Блок-схема метода hasNext.</a></li>
+<li><a href="#BlockScheme3">2.3. Блок-схема метода hasPrevious.</a></li>
+<li><a href="#BlockScheme4">2.4. Блок-схема метода next.</a></li>
+<li><a href="#BlockScheme5">2.5. Блок-схема метода previous.</a></li>
+<li><a href="#BlockScheme6">2.6. Блок-схема метода getValue.</a></li>
+</ul>
+</li>
+<li><a href="#Samples">3. Пример на Java.</a></li>
+<li><a href="#AdvantagesAndDisadvantages">4. Преимущества и Недостатки.</a></li>
+</ul>
+<h2 id="Description">1. Описание алгоритма.</h2>
+<p>Пусть у нас есть начальный алфавит:</p>
+<img src="img/alphabet.png" />
+<p><i>Рис. 1. Пример начального алфавита.</i></p>
+<p>В алфавите буквы пронумерованы. К примеру, от нуля.</p>
+<p>Пусть у нас есть массив алфавита с элементами x=>y (индекс x соответствует символу y).</p>
+<p>Массив алфавита: [0=&gt;"A", 1=&gt;"B", 2 =&gt; "C", 3 =&gt; "D"]</p>
+<p>Рассмотрим на примере этого алфавита пример полного перебора по алфавиту.</p>
+<img src="img/process.gif" />
+<p><i>Анимация. 1. Пример алгоритма полного перебора по алфавиту, без расширения границ при переполнении.</i></p>
+<p></p>
+<p>Примеры значий шагов алгоритма:</p>
+<p><i>Таблица 1. Пример шагов алгоритма.</i></p>
+<table cellpadding="0" cellspacing="0" border="1">
+<tbody>
+<tr class="rowedTable-notEvenRow">
+<td><b>Шаг</b></td>
+<td><b>Значения индексов</b></td>
+<td><b>Буква по индесу</b></td>
+</tr>
+<tr class="rowedTable-evenRow">
+<td>1
+</td>
+<td>0000</td>
+<td>AAAA</td>
+</tr>
+<tr class="rowedTable-notEvenRow">
+<td>2
+</td>
+<td>0001</td>
+<td>AAAB</td>
+</tr>
+<tr class="rowedTable-evenRow">
+<td>3
+</td>
+<td>0002</td>
+<td>AAAC</td>
+</tr>
+<tr class="rowedTable-notEvenRow">
+<td>4
+</td>
+<td>0003</td>
+<td>AAAD</td>
+</tr>
+<tr class="rowedTable-evenRow">
+<td>5
+</td>
+<td>0010</td>
+<td>AABA</td>
+</tr>
+<tr class="rowedTable-notEvenRow">
+<td>6
+</td>
+<td>0011</td>
+<td>AABB</td>
+</tr>
+<tr class="rowedTable-evenRow">
+<td>...
+</td>
+<td>...</td>
+<td>....</td>
+</tr>
+<tr class="rowedTable-notEvenRow">
+<td>X
+</td>
+<td>2330</td>
+<td>CDDA</td>
+</tr>
+<tr class="rowedTable-evenRow">
+<td>X+1
+</td>
+<td>2331</td>
+<td>CDDB</td>
+</tr>
+<tr class="rowedTable-notEvenRow">
+<td>...
+</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="rowedTable-evenRow">
+<td>N-1
+</td>
+<td>3332</td>
+<td>DDDC</td>
+</tr>
+<tr class="rowedTable-notEvenRow">
+<td>N
+</td>
+<td>3333</td>
+<td>DDDD</td>
+</tr>
+</tr>
+</tbody>
+</table>
+<p>Шаги алгоритма получения следующего элемента:</p>
+<ul class="noneVisibleMarkers">
+<li><b>Входные данные</b>: алфавит, минимальное значение, максимальное значение.</li>
+<li>В конструкторе инициализируем начальное значение массива текущего элемента &mdash; <code>value</code>.</li>
+<li>1. В массиве <code>value</code> содержаться индексы элементов алфавита. Увеличивываем на один значение первого элемента в массиве.</li>
+<li>2. В цикле просматривываем каждый элемент массива <code>value</code> с первого элемента:
+<ul class="noneVisibleMarkers">
+<li>2.1. Если значение элемента массива больше последнего элемента, то сбрасывываем его значение на нуль и увеличивываем значение следующего элемента на один.</li>
+<li>2.2. Переходим к следующему элементу и проделывываем для него пункт 2.1.</li>
+<li>2.3. Если при посмотре текущего последнего элемента массива <code>value</code> не хватило элемента для переноса, то просто создаём этот элемент.</li>
+</ul>
+</li>
+</ul>
+<h2 id="BlockScheme">2. Блок-схема алгоритма.</h2>
+<p>Приведём блок-схемы для всего процесса генерации. Алгоритм содержат следующие функции:</p>
+<ul>
+<li><b>Конструктор</b> &mdash; отвечает за инициализацию начальных значений при начале перебора.</li>
+<li><b>hasNext</b> &mdash; метод для проверки наличия следующего значения.</li>
+<li><b>hasPrevious</b> &mdash; метод для проверки наличия предыдущего значения.</li>
+<li><b>next</b> &mdash; метод для перевода состояния в следующее значение перебора.</li>
+<li><b>previous</b> &mdash; метод для перевода состояния в предыдущее значение перебора.</li>
+<li><b>getValue</b> &mdash; метод для получения значения текущего элемента.</li>
+</ul>
+<h3 id="BlockScheme1">2.1. Блок-схема конструктора.</h3>
+<p>Входные данные: <code>minValue</code> &mdash; нижняя граница перебора, <code>maxValue</code>  &mdash; верхняя граница перебора,  <code>alphabet</code> &mdash; алфавит для перебора.</p>
+<p>Выходные данные: <code>value</code> &mdash; текущее значение (копия <code>minValue</code>), сохранённая <code>minValue</code>, сохранённая <code>maxValue</code>, сохранённый <code>alphabet</code>.</p>
+<img src="img/bs_constructor.png" />
+<p><i>Рис. 2. Блок-схема конструктора.</i></p>
+<h3 id="BlockScheme2">2.2. Блок-схема метода hasNext.</h3>
+<p>Входные данные: <code>minValue</code> &mdash; нижняя граница перебора, <code>maxValue</code>  &mdash; верхняя граница перебора, <code>value</code> &mdash; текущее значение, <code>alphabet</code> &mdash; алфавит для перебора.</p>
+<p>Выходные данные: Значение Истина или Ложь для ответа на вопрос "Есть ли следующий элемент?".</p>
+<img src="img/bs_hasnext.png" />
+<p><i>Рис. 3. Блок-схема метода hasNext.</i></p>
+<h3 id="BlockScheme3">2.3. Блок-схема метода hasPrevious.</h3>
+<p>Входные данные: <code>minValue</code> &mdash; нижняя граница перебора, <code>maxValue</code>  &mdash; верхняя граница перебора, <code>value</code> &mdash; текущее значение, <code>alphabet</code> &mdash; алфавит для перебора.</p>
+<p>Выходные данные: Значение Истина или Ложь для ответа на вопрос "Есть ли предыдущий элемент?".</p>
+<img src="img/bs_hasprevious.png" />
+<p><i>Рис. 4. Блок-схема метода hasPrevious.</i></p>
+<h3 id="BlockScheme4">2.4. Блок-схема метода next.</h3>
+<p>Входные данные: <code>minValue</code> &mdash; нижняя граница перебора, <code>maxValue</code>  &mdash; верхняя граница перебора, <code>value</code> &mdash; текущее значение, <code>alphabet</code> &mdash; алфавит для перебора.</p>
+<p>Выходные данные: перевод состояния <code>value</code>.</p>
+<img src="img/bs_next.png" />
+<p><i>Рис. 5. Блок-схема метода next.</i></p>
+<h3 id="BlockScheme5">2.5. Блок-схема метода previous.</h3>
+<p>Входные данные: <code>minValue</code> &mdash; нижняя граница перебора, <code>maxValue</code>  &mdash; верхняя граница перебора, <code>value</code> &mdash; текущее значение, <code>alphabet</code> &mdash; алфавит для перебора.</p>
+<p>Выходные данные: перевод состояния <code>value</code>.</p>
+<img src="img/bs_previous.png" />
+<p><i>Рис. 6. Блок-схема метода previous.</i></p>
+<h3 id="BlockScheme6">2.6. Блок-схема метода getValue.</h3>
+<p>Входные данные: <code>minValue</code> &mdash; нижняя граница перебора, <code>maxValue</code>  &mdash; верхняя граница перебора, <code>value</code> &mdash; текущее значение, <code>alphabet</code> &mdash; алфавит для перебора.</p>
+<p>Выходные данные: Преобразование <code>value</code> в строку символов.</p>
+<img src="img/bs_getvalue.png" />
+<p><i>Рис. 7. Блок схема метода getValue.</i></p>
+<h2 id="Samples">3. Пример на Java.</h2>
+<p>Пример реализации полного перебора по афавиту на языке Java 12 SE.</p>
+<p><b>Bruteforce.java</b>:</p>
+<div class="commands">
+package Bruteforce;
+<br/>
+<br/>import java.util.ArrayList;
+<br/>
+<br/>public class Bruteforce {
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;protected ArrayList&lt;Integer&gt; minValue;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;protected ArrayList&lt;Integer&gt; value;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;protected ArrayList&lt;Integer&gt; maxValue;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;protected ArrayList&lt;Character&gt; alphabet;
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;public <b>Bruteforce</b>(String alphabet, ArrayList&lt;Integer&gt; minValue, ArrayList&lt;Integer&gt; maxValue) {
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* Переменные с префиксом this - это защищённые поля класса. Без префикса - параметры конструктора. */
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Запоминаем алфавит.
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.alphabet = new ArrayList&lt;Character&gt;();
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i &lt; alphabet.length(); i++)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.alphabet.add(alphabet.charAt(i));
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Проверка на то, что размер minValue меньше или равно maxValue.
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(minValue.size() &lt; maxValue.size()) {
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Запоминаем начальное и конечное значения.
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.minValue = minValue;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.maxValue = maxValue;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.value = (ArrayList&lt;Integer&gt;) minValue.clone();
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else {
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(minValue.size() &gt; maxValue.size())
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new IllegalArgumentException();
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i &lt; maxValue.size(); i++) {
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(minValue.get(i).intValue() &lt; maxValue.get(i).intValue())
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(minValue.get(i).intValue() &gt; maxValue.get(i).intValue())
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new IllegalArgumentException();
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Запоминаем начальное и конечное значения.
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.minValue = minValue;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.maxValue = maxValue;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.value = (ArrayList&lt;Integer&gt;) minValue.clone();
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;}
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;public boolean <b>hasNext</b>() {
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(value.size() &lt; maxValue.size())
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return true;
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int i;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;boolean result = false;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(i = maxValue.size() - 1; i &gt; -1; i--) {
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(value.get(i).intValue() &gt; maxValue.get(i).intValue())
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int j = maxValue.size() - 1; j &gt; -1 && !result; j--) {
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if((value.get(j).intValue() != maxValue.get(j).intValue()))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = true;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(i == -1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return result;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;}
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;public boolean <b>hasPrevious</b>() {
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(value.size() &gt; minValue.size())
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return true;
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int i;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;boolean result = false;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(i = value.size() - 1; i &gt; -1; i--) {
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(value.get(i).intValue() &lt;  minValue.get(i).intValue())
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int j = value.size() - 1; j &gt; -1 && !result; j--) {
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if((value.get(j).intValue() != minValue.get(j).intValue()))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = true;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(i == -1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return result;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;}
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;public void <b>next</b>() {
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value.set(0, value.get(0) + 1);
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int startSize = value.size();
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i &lt; startSize; i++) {
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(value.get(i) &gt;= alphabet.size()) {
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value.set(i, 0);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(i == value.size() - 1) {
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value.add(0);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else {
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value.set(i + 1, value.get(i + 1) + 1);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;}
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;public void <b>previous</b>() {
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int firstIndex = 0;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int lastIndex = value.size() - 1;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int lastAlphabetIndex = alphabet.size() - 1;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value.set(firstIndex, value.get(firstIndex) - 1);
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i &lt; value.size() - 1; i++) {
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(value.get(i) &lt;= -1) {
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value.set(i, lastAlphabetIndex);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value.set(i+1, value.get(i+1) - 1);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(value.get(lastIndex) &lt; 0) {
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ArrayList&lt;Integer&gt; resultArray = new ArrayList&lt;Integer&gt;();
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int j = lastIndex - 1; j &gt; -1; j--) {
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;resultArray.add(lastAlphabetIndex);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value = resultArray;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;}
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;public String <b>getValue</b>() {
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String result = "";
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int i = value.size() - 1; i &gt; -1; i--) {
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result += alphabet.get(value.get(i));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return result;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;}
+<br/>
+<br/>}
+</div>
+<p>Далее пример для тестирования класса написанного выше.</p>
+<p><b>TestBruteforce.java</b>:</p>
+<div class="commands">
+package Bruteforce;
+<br/>
+<br/>import java.util.ArrayList;
+<br/>
+<br/>public class TestBruteforce {
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ArrayList&lt;Integer&gt; min = new ArrayList&lt;Integer&gt;(1);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ArrayList&lt;Integer&gt; max = new ArrayList&lt;Integer&gt;(4);
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// min = [0]
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;min.add(0);
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// max = [3, 3, 3, 3]
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i &lt; 4; i++)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max.add(3);
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bruteforce counter = new Bruteforce("0123", min, max);
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(counter.getValue());
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while(counter.hasNext()) {
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;counter.next();
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(counter.getValue());
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while(counter.hasPrevious()) {
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;counter.previous();
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(counter.getValue());
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;}
+<br/>
+<br/>}
+</div>
+<p>Вывод теста:</p>
+<div class="commands">
+0
+<br/>1
+<br/>2
+<br/>3
+<br/>00
+<br/>01
+<br/>02
+<br/>03
+<br/>10
+<br/><i>...</i>
+<br/>23
+<br/>30
+<br/>31
+<br/>32
+<br/>33
+<br/>000
+<br/>001
+<br/>002
+<br/>003
+<br/>010
+<br/>011
+<br/>012
+<br/>013
+<br/>020
+<br/>021
+<br/>022
+<br/><i>...</i>
+<br/>331
+<br/>332
+<br/>333
+<br/>0000
+<br/>0001
+<br/>0002
+<br/>0003
+<br/><i>...</i>
+<br/>0331
+<br/>0332
+<br/>0333
+<br/>1000
+<br/>1001
+<br/>1002
+<br/>1003
+<br/>1010
+<br/>1011
+<br/>1012
+<br/>1013
+<br/>1020
+<br/>1021
+<br/>1022
+<br/>1023
+<br/>1030
+<br/><i>...</i>
+<br/>2230
+<br/>2231
+<br/>2232
+<br/>2233
+<br/>2300
+<br/>2301
+<br/>2302
+<br/>2303
+<br/>2310
+<br/>2311
+<br/>2312
+<br/>2313
+<br/>2320
+<br/>2321
+<br/>2322
+<br/>2323
+<br/>2330
+<br/>2331
+<br/>2332
+<br/>2333
+<br/>3000
+<br/>3001
+<br/>3002
+<br/>3003
+<br/><i>...</i>
+<br/>3210
+<br/>3211
+<br/>3212
+<br/>3213
+<br/>3220
+<br/>3221
+<br/>3222
+<br/>3223
+<br/>3230
+<br/>3231
+<br/>3232
+<br/>3233
+<br/>3300
+<br/>3301
+<br/>3302
+<br/>3303
+<br/>3310
+<br/>3311
+<br/>3312
+<br/>3313
+<br/>3320
+<br/>3321
+<br/>3322
+<br/>3323
+<br/>3330
+<br/>3331
+<br/>3332
+<br/>&nbsp;<b>3333</b>
+<br/>3332
+<br/>3331
+<br/>3330
+<br/>3323
+<br/>3322
+<br/>3321
+<br/>3320
+<br/>3313
+<br/>3312
+<br/>3311
+<br/>3310
+<br/>3303
+<br/>3302
+<br/>3301
+<br/>3300
+<br/><i>...</i>
+<br/>2102
+<br/>2101
+<br/>2100
+<br/>2033
+<br/>2032
+<br/>2031
+<br/>2030
+<br/>2023
+<br/>2022
+<br/>2021
+<br/>2020
+<br/>2013
+<br/>2012
+<br/>2011
+<br/>2010
+<br/>2003
+<br/>2002
+<br/>2001
+<br/>2000
+<br/>1333
+<br/>1332
+<br/>1331
+<br/>1330
+<br/>1323
+<br/>1322
+<br/>1321
+<br/><i>...</i>
+<br/>0322
+<br/>0321
+<br/>0320
+<br/>0313
+<br/>0312
+<br/>0311
+<br/>0310
+<br/>0303
+<br/>0302
+<br/>0301
+<br/>0300
+<br/>0233
+<br/>0232
+<br/>0231
+<br/>0230
+<br/>0223
+<br/>0222
+<br/>0221
+<br/>0220
+<br/>0213
+<br/>0212
+<br/>0211
+<br/>0210
+<br/>0203
+<br/>0202
+<br/>0201
+<br/>0200
+<br/>0133
+<br/><i>...</i>
+<br/>0003
+<br/>0002
+<br/>0001
+<br/>0000
+<br/>333
+<br/>332
+<br/>331
+<br/>330
+<br/>323
+<br/><i>...</i>
+<br/>300
+<br/>233
+<br/>232
+<br/>231
+<br/>230
+<br/>223
+<br/>222
+<br/>221
+<br/>220
+<br/>213
+<br/>212
+<br/>211
+<br/>210
+<br/>203
+<br/>202
+<br/>201
+<br/>200
+<br/>133
+<br/>132
+<br/>131
+<br/>130
+<br/>123
+<br/>122
+<br/>121
+<br/>120
+<br/>113
+<br/>112
+<br/>111
+<br/>110
+<br/>103
+<br/>102
+<br/>101
+<br/>100
+<br/>033
+<br/>032
+<br/>031
+<br/>030
+<br/>023
+<br/>022
+<br/>021
+<br/>020
+<br/>013
+<br/>012
+<br/>011
+<br/>010
+<br/>003
+<br/>002
+<br/>001
+<br/>000
+<br/>33
+<br/>32
+<br/>31
+<br/>30
+<br/>23
+<br/>22
+<br/>21
+<br/>20
+<br/>13
+<br/>12
+<br/>11
+<br/>10
+<br/>03
+<br/>02
+<br/>01
+<br/>00
+<br/>3
+<br/>2
+<br/>1
+<br/>0
+</div>
+<h2 id="AdvantagesAndDisadvantages">4. Преимущества и Недостатки.</h2>
+<div class="warning"><p>Не используйте данный алгоритм для взлома паролей.</p></div>
+<p>Преимущества:
+<ul>
+<li>Хороший алгоритм для тестирования, для генерации всех входных значений.</li>
+</ul>
+</p>
+<p>Недостатки:
+<ul>
+<li>Даёт возможность атаки на систему с помощью полного перебора по алфавиту, к примеру, паролей.</li>
+</ul>
+</p>
+</body>
+</html>

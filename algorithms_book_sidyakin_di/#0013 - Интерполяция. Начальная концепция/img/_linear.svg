@@ -1,0 +1,66 @@
+<?xml version="1.0" standalone="yes"?>
+<parent xmlns="https://designermanuals.blogspot.com/">
+    <!-- (c) Дмитрий Игоревич Сидякин, 2020, Линейная интерполяция -->
+    <svg xmlns='http://www.w3.org/2000/svg'
+		  width="714px" height="444px" version="1.1">
+		<g stroke="green" >
+			<line x1="28" y1="28" x2="150" y2="28"
+				stroke-width="5"  />
+			<line x1="28" y1="266.5" x2="150" y2="266.5"
+				stroke-width="5"  />
+		</g>
+		<g stroke="orange" >
+			<line x1="28" y1="56" x2="150" y2="56"
+				stroke-width="5"  />
+			<line x1="272" y1="210.5" x2="394" y2="210.5"
+				stroke-width="5"  />
+		</g>
+		<g stroke="black" >
+			<line x1="28" y1="84" x2="150" y2="84"
+				stroke-width="2"  />
+			<circle cx="89" cy="112" r="5"
+				fill="black" stroke-width="5"  />
+			<line x1="89" y1="112" x2="89" y2="127"
+				stroke-width="5"  />
+				
+			<line x1="150" y1="266.5" x2="272" y2="210.5"
+				stroke-width="2"  />
+				
+			<circle cx="211" cy="238.5" r="5"
+				fill="black" stroke-width="5"  />
+			<line x1="211" y1="238.5" x2="211" y2="416.5"
+				stroke-width="5"  />
+				
+			<line x1="28" y1="264" x2="28" y2="417"
+				stroke-width="1" stroke-dasharray="4 2" />
+			<line x1="150" y1="264" x2="150" y2="417"
+				stroke-width="1" stroke-dasharray="4 2" />
+			<line x1="272" y1="208" x2="272" y2="417"
+				stroke-width="1" stroke-dasharray="4 2" />
+			<line x1="394" y1="208" x2="394" y2="417"
+				stroke-width="1" stroke-dasharray="4 2" />
+			<line x1="28" y1="416.5" x2="394" y2="416.5"
+				stroke-width="1" />
+		</g>
+		<text x="28" y="166.5" 
+        font-family="Verdana" font-size="16" fill="black" >
+			Линейная интерполяция
+		</text>
+		<text x="178" y="32.5" 
+        font-family="Verdana" font-size="14" fill="black" >
+			- Значение функции слева
+		</text>
+		<text x="178" y="60.5" 
+        font-family="Verdana" font-size="14" fill="black" >
+			- Значение функции справа
+		</text>
+		<text x="178" y="87.5" 
+        font-family="Verdana" font-size="14" fill="black" >
+			- Восстановленное (интерполированное) значение функции
+		</text>
+		<text x="178" y="116.5" 
+        font-family="Verdana" font-size="14" fill="black" >
+			- Восстановленное (интерполированное) значение функции, одно из
+		</text>
+    </svg>   
+</parent>
