@@ -23,7 +23,7 @@
 		4. [Полный перебор по алфавиту](algorithms_book_sidyakin_di/0004 - Полный перебор по алфавиту/index.html)
 		5. [Сложность алгоритмов. Введение](algorithms_book_sidyakin_di/0005 - Сложность алгоритмов. Введение/index.html)
 		6. [Обмен значений переменных](algorithms_book_sidyakin_di/0006 - Обмен значений переменных/index.html)
-		7. [algorithms_book_sidyakin_di/#0007 - Алгоритмы сортировки #3, Быстрая Сортировка (QuickSort), Сортировка по Хоару/index.html](algorithms_book_sidyakin_di/0007 - Алгоритмы сортировки 3, Быстрая Сортировка (QuickSort), Сортировка по Хоару/index.html)
+		7. [Алгоритмы сортировки #3, Быстрая Сортировка (QuickSort), Сортировка по Хоару](algorithms_book_sidyakin_di/0007 - Алгоритмы сортировки 3, Быстрая Сортировка (QuickSort), Сортировка по Хоару/index.html)
 		8. [Сглаживание графики (Anti-Aliasing)](algorithms_book_sidyakin_di/0008 - Сглаживание графики (Anti-Aliasing)/index.html)
 		9. [Кривые Безье](algorithms_book_sidyakin_di/0009 - Кривые Безье/index.html)
 		10. [Алгоритмы распознавания по эталону](algorithms_book_sidyakin_di/0010 - Алгоритмы распознавания по эталону/index.html)
