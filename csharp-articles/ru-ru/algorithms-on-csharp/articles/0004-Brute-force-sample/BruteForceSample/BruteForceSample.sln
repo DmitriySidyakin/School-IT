@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BruteForceSample", "BruteForceSample.csproj", "{E5C14758-CA03-4D55-B141-10BBA0DE6177}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5C14758-CA03-4D55-B141-10BBA0DE6177}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5C14758-CA03-4D55-B141-10BBA0DE6177}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5C14758-CA03-4D55-B141-10BBA0DE6177}.Debug|x64.ActiveCfg = Debug|x64
+		{E5C14758-CA03-4D55-B141-10BBA0DE6177}.Debug|x64.Build.0 = Debug|x64
+		{E5C14758-CA03-4D55-B141-10BBA0DE6177}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5C14758-CA03-4D55-B141-10BBA0DE6177}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5C14758-CA03-4D55-B141-10BBA0DE6177}.Release|x64.ActiveCfg = Release|x64
+		{E5C14758-CA03-4D55-B141-10BBA0DE6177}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9447335A-380C-4136-B90D-5B27A6D4A989}
+	EndGlobalSection
+EndGlobal
