@@ -65,7 +65,7 @@
 # Приложения на C# с открытым исходным кодом (OpenSource)
 
 - Мои:
-	- [Двупользовательские шашки на одном ПК](csharp-opensource/ru-ru/myprojects/Chess)
+	- [Шашки](https://github.com/DmitriySidyakin/Chess/tree/main/docs/ru-ru/)
 	- (в процессе написания)
 - Сторонние:
 	- (в процессе написания)
