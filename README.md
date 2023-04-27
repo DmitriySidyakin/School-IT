@@ -97,4 +97,4 @@
 
 (в процессе написания)
 
-© Сидякин Д. И., 2019-2023 Your site is live at [https://dmitriysidyakin.github.io/CSharp-Tutorials/](https://dmitriysidyakin.github.io/CSharp-Tutorials/)
+© Сидякин Д. И., 2019-2023 The site is live at [https://dmitriysidyakin.github.io/CSharp-Tutorials/](https://dmitriysidyakin.github.io/CSharp-Tutorials/)
