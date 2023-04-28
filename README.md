@@ -66,6 +66,7 @@
 
 - Мои:
 	- [Шашки](https://github.com/DmitriySidyakin/Chess/tree/main/docs/ru-ru/)
+	- [Начальная база для рендеринга на процессоре. Ознакомительная статья.](https://github.com/DmitriySidyakin/Blog-ComputerGraphics/)
 	- (в процессе написания)
 - Сторонние:
 	- (в процессе написания)
