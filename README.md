@@ -14,7 +14,7 @@
 	- [Алгоритмы](csharp-articles/ru-ru/algorithms-on-csharp/README.md):
 		1. [Кривые Безье](csharp-articles/ru-ru/algorithms-on-csharp/articles/0001-Bezier-curves/README.md)
 		2. [Алгоритм нахождения кратчайшего пути в графе (методом грубой силы)](csharp-articles/ru-ru/algorithms-on-csharp/articles/0002-Graphs/README.md)
-		3. [Комбинаторика. Полный перебор по алфавиту](csharp-articles/ru-ru/algorithms-on-csharp/articles/0003-Brute-force-sample/README.md)
+		3. [Комбинаторика. Полный перебор по алфавиту](csharp-articles/ru-ru/algorithms-on-csharp/articles/0003-Brute-force-sample/README.md) (статья в процессе написания)
 		4. [3D-графика на процессоре (Стереометрия в ортогональной проекции)](csharp-articles/ru-ru/algorithms-on-csharp/articles/0004-3D-on-CPU/README.md) (статья в процессе написания)
 	- [Моя нерестоврированная компоновка по коллекции алгоритмов (здесь можно скачать html-стастьи для просмотра off-line)](https://github.com/DmitriySidyakin/CSharp-Tutorials/tree/main/algorithms_book_sidyakin_di)
 		1. [Алгоритмы сортировки #1](algorithms_book_sidyakin_di/0001%20-%20Алгоритмы%20сортировки%201/index.html)
