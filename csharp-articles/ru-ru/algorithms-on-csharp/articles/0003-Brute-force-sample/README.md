@@ -1,4 +1,4 @@
-[Главная](https://dmitriysidyakin.github.io/CSharp-Tutorials/) >> [Алгоритмы](https://dmitriysidyakin.github.io/CSharp-Tutorials/csharp-articles/ru-ru/algorithms-on-csharp/)
+[Главная](https://dmitriysidyakin.github.io/School-IT/) >> [Алгоритмы](https://dmitriysidyakin.github.io/School-IT/csharp-articles/ru-ru/algorithms-on-csharp/)
 
 # Комбинаторика. Полный перебор по алфавиту (статья в процессе написания)
 

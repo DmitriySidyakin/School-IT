@@ -9,14 +9,14 @@
 1. Учебники:
 	*отсутствуют*
 2. Ключевые слова:
-	- [Ключевые слова C# 10 (шпаргалка-напоминалка)](csharp-tutorials/ru-ru/csharp-10-keywords/README.md)
+	- [Ключевые слова C# 10 (шпаргалка-напоминалка)](School-IT/ru-ru/csharp-10-keywords/README.md)
 3. Статьи с примерами на C#:
 	- [Алгоритмы](csharp-articles/ru-ru/algorithms-on-csharp/README.md):
 		1. [Кривые Безье](csharp-articles/ru-ru/algorithms-on-csharp/articles/0001-Bezier-curves/README.md)
 		2. [Алгоритм нахождения кратчайшего пути в графе (методом грубой силы)](csharp-articles/ru-ru/algorithms-on-csharp/articles/0002-Graphs/README.md)
 		3. [Комбинаторика. Полный перебор по алфавиту](csharp-articles/ru-ru/algorithms-on-csharp/articles/0003-Brute-force-sample/README.md) (статья в процессе написания)
 		4. [3D-графика на процессоре (Стереометрия в ортогональной проекции)](csharp-articles/ru-ru/algorithms-on-csharp/articles/0004-3D-on-CPU/README.md) (статья в процессе написания)
-	- [Моя нерестоврированная компоновка по коллекции алгоритмов (здесь можно скачать html-стастьи для просмотра off-line)](https://github.com/DmitriySidyakin/CSharp-Tutorials/tree/main/algorithms_book_sidyakin_di)
+	- [Моя нерестоврированная компоновка по коллекции алгоритмов (здесь можно скачать html-стастьи для просмотра off-line)](https://github.com/DmitriySidyakin/School-IT/tree/main/algorithms_book_sidyakin_di)
 		1. [Алгоритмы сортировки #1](algorithms_book_sidyakin_di/0001%20-%20Алгоритмы%20сортировки%201/index.html)
 		2. [Двоичный поиск или Бинарный поиск или Алгоритм деления пополам](algorithms_book_sidyakin_di/0002%20-%20Двоичный%20поиск%20или%20Бинарный%20поиск%20или%20Алгоритм%20деления%20пополам/index.html)
 		3. [Алгоритмы-Заблуждения -  Алгоритмы сортировки #2, Быстрая пузырьковая сортировка или Всегда проверяйте](algorithms_book_sidyakin_di/0003%20-%20Алгоритмы-Заблуждения%20-%20%20Алгоритмы%20сортировки%202,%20Быстрая%20пузырьковая%20сортировка%20или%20Всегда%20проверяйте/index.html)
@@ -98,4 +98,4 @@
 
 (в процессе написания)
 
-© Сидякин Д. И., 2019-2023 The site is live at [https://dmitriysidyakin.github.io/CSharp-Tutorials/](https://dmitriysidyakin.github.io/CSharp-Tutorials/)
+© Сидякин Д. И., 2019-2023 The site is live at [https://dmitriysidyakin.github.io/School-IT/](https://dmitriysidyakin.github.io/School-IT/)

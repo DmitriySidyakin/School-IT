@@ -1,4 +1,4 @@
-[Главная](https://dmitriysidyakin.github.io/CSharp-Tutorials/) >> [Упражнения](https://dmitriysidyakin.github.io/CSharp-Tutorials/csharp-exercises/ru-ru/)
+[Главная](https://dmitriysidyakin.github.io/School-IT/) >> [Упражнения](https://dmitriysidyakin.github.io/School-IT/csharp-exercises/ru-ru/)
 
 # Сложные упражнения:
 

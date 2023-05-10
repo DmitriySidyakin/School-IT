@@ -1,4 +1,4 @@
-[Главная](https://dmitriysidyakin.github.io/CSharp-Tutorials/)
+[Главная](https://dmitriysidyakin.github.io/School-IT/)
 
 # Упражнения по C#:
 
