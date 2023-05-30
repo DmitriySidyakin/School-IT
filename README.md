@@ -19,6 +19,7 @@
 	- [Моя нерестоврированная компоновка по коллекции алгоритмов](algorithms_book_sidyakin_di/)
 4. Внешние учебники на русском:
 	- [Ключевые слова C#](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/)
+	- [Как перейти на новую версию C#](https://learn.microsoft.com/ru-ru/dotnet/csharp/whats-new/csharp-version-history)
 	- [Полное руководство по языку программирования С# 11 и платформе .NET 7](https://metanit.com/sharp/tutorial/)
 	- [Руководство по программированию на C#](https://docs.microsoft.com/ru-ru/dotnet/csharp/programming-guide/)
 	- [Паттерны проектирования в C# и .NET](https://metanit.com/sharp/patterns/)
