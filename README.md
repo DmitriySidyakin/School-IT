@@ -9,7 +9,7 @@
 1. Учебники:
 	*отсутствуют*
 2. Ключевые слова:
-	- [Ключевые слова C# 10 (шпаргалка-напоминалка)](School-IT/ru-ru/csharp-10-keywords/README.md)
+	- [Ключевые слова C# 10 (шпаргалка-напоминалка)](csharp-tutorials/ru-ru/csharp-10-keywords/README.md)
 3. Статьи с примерами на C#:
 	- [Алгоритмы](csharp-articles/ru-ru/algorithms-on-csharp/README.md):
 		1. [Кривые Безье](csharp-articles/ru-ru/algorithms-on-csharp/articles/0001-Bezier-curves/README.md)
