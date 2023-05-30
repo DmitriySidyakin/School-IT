@@ -2,7 +2,7 @@
 
 #Алгоритмы 
 
-[Моя нерестоврированная компоновка по коллекции алгоритмов (здесь можно скачать html-стастьи для просмотра off-line)](https://github.com/DmitriySidyakin/School-IT/tree/main/algorithms_book_sidyakin_di)
+[Моя нерестоврированная компоновка по коллекции алгоритмов (здесь можно скачать html-стастьи для просмотра off-line)](https://github.com/DmitriySidyakin/School-IT/tree/main/algorithms_book_sidyakin_di):
 
 	1. [Алгоритмы сортировки #1](algorithms_book_sidyakin_di/0001%20-%20Алгоритмы%20сортировки%201/index.html)
 	2. [Двоичный поиск или Бинарный поиск или Алгоритм деления пополам](algorithms_book_sidyakin_di/0002%20-%20Двоичный%20поиск%20или%20Бинарный%20поиск%20или%20Алгоритм%20деления%20пополам/index.html)
