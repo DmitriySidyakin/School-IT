@@ -1,6 +1,6 @@
 [Главная](https://dmitriysidyakin.github.io/School-IT/)
 
-#Алгоритмы 
+# Алгоритмы 
 
 [Моя нерестоврированная компоновка по коллекции алгоритмов (здесь можно скачать html-стастьи для просмотра off-line)](https://github.com/DmitriySidyakin/School-IT/tree/main/algorithms_book_sidyakin_di):
 1. [Алгоритмы сортировки #1](0001%20-%20Алгоритмы%20сортировки%201/index.html)
