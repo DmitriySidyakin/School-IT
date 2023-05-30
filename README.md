@@ -16,7 +16,7 @@
 		2. [Алгоритм нахождения кратчайшего пути в графе (методом грубой силы)](csharp-articles/ru-ru/algorithms-on-csharp/articles/0002-Graphs/README.md)
 		3. [Комбинаторика. Полный перебор по алфавиту](csharp-articles/ru-ru/algorithms-on-csharp/articles/0003-Brute-force-sample/README.md) (статья в процессе написания)
 		4. [3D-графика на процессоре (Стереометрия в ортогональной проекции)](csharp-articles/ru-ru/algorithms-on-csharp/articles/0004-3D-on-CPU/README.md) (статья в процессе написания)
-	- [Моя нерестоврированная компоновка по коллекции алгоритмов (здесь можно скачать html-стастьи для просмотра off-line)](algorithms_book_sidyakin_di/)
+	- [Моя нерестоврированная компоновка по коллекции алгоритмов](algorithms_book_sidyakin_di/)
 4. Внешние учебники на русском:
 	- [Ключевые слова C#](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/)
 	- [Полное руководство по языку программирования С# 11 и платформе .NET 7](https://metanit.com/sharp/tutorial/)
