@@ -55,6 +55,7 @@
 	- [Библиотека для работы с графами](https://github.com/DmitriySidyakin/Graph)
 - Сторонние:
     - [Dapper](https://metanit.com/sharp/aspnet5/26.1.php)
+	- [Kubernetes (K8s)](https://kubernetes.io/ru/)
 	- (в процессе написания)
 	
 # Программа ОГЭ и ЕГЭ иформатика и ИКТ, математика, физика, русский язык
