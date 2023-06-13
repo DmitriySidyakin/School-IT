@@ -56,6 +56,7 @@
 - Сторонние:
     - [Dapper](https://metanit.com/sharp/aspnet5/26.1.php)
 	- [Kubernetes (K8s)](https://kubernetes.io/ru/)
+	- [Docker](https://www.docker.com/)
 	- (в процессе написания)
 	
 # Программа ОГЭ и ЕГЭ иформатика и ИКТ, математика, физика, русский язык
