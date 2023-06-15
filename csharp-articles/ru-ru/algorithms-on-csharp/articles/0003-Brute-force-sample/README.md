@@ -1,6 +1,6 @@
 [Главная](https://dmitriysidyakin.github.io/School-IT/) >> [Алгоритмы](https://dmitriysidyakin.github.io/School-IT/csharp-articles/ru-ru/algorithms-on-csharp/)
 
-# Комбинаторика. Полный перебор по алфавиту (статья в процессе написания)
+# Комбинаторика. Полный перебор по алфавиту
 
 Сразу хочу сказать, что алгоритм приведён в информационных целях и его нельзя использовать для взлома паролей.
 
@@ -58,3 +58,7 @@
 
 - Даёт возможность атаки на систему с помощью полного перебора по алфавиту, к примеру, паролей.
 
+
+## Исходный код
+
+Пример полного перебора по алфавиту на языке C# расположен [тут](https://github.com/DmitriySidyakin/School-IT/tree/main/csharp-articles/ru-ru/algorithms-on-csharp/articles/0003-Brute-force-sample/BruteForceSample).
