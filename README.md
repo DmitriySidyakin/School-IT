@@ -15,7 +15,7 @@
 		1. [Кривые Безье](csharp-articles/ru-ru/algorithms-on-csharp/articles/0001-Bezier-curves/README.md)
 		2. [Алгоритм нахождения кратчайшего пути в графе (методом грубой силы)](csharp-articles/ru-ru/algorithms-on-csharp/articles/0002-Graphs/README.md)
 		3. [Комбинаторика. Полный перебор по алфавиту](csharp-articles/ru-ru/algorithms-on-csharp/articles/0003-Brute-force-sample/README.md)
-		4. [3D-графика на процессоре (Стереометрия в ортогональной проекции)](csharp-articles/ru-ru/algorithms-on-csharp/articles/0004-3D-on-CPU/README.md) (статья в процессе написания)
+		4. [3D-графика на процессоре (Стереометрия в ортогональной проекции)](csharp-articles/ru-ru/algorithms-on-csharp/articles/0004-3D-on-CPU/README.md)
 	- [Моя нерестоврированная компоновка по коллекции алгоритмов](algorithms_book_sidyakin_di/)
 4. Внешние учебники на русском:
 	- [Ключевые слова C#](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/)
