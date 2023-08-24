@@ -313,6 +313,8 @@ const int CenterXY = 0;
 
 ### continue
 
+Ключевое слово предназначено для перехода к следующей итерации цикла (**for**, **foreach**, **while** или **do**).
+
 ### decimal
 
 ### default
