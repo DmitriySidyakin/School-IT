@@ -307,7 +307,7 @@ class Circle
 
 ```cs
 
-const int CenterXY = 0, ;
+const int CenterXY = 0;
 
 ```
 
