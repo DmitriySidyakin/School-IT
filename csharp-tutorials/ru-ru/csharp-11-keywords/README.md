@@ -46,6 +46,7 @@ C\# 11 поддерживает платформа .NET 7.
 [finally](#finally)
 [fixed](#fixed)
 [float](#float)
+[for](#for)
 [foreach](#foreach)
 [goto](#goto)
 [if](#if)
@@ -385,6 +386,8 @@ enum ВременаГода
 ### fixed
 
 ### float
+
+### for
 
 ### foreach
 
