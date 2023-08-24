@@ -303,6 +303,14 @@ class Circle
 
 ### const
 
+Используется для объявления константной переменной или константного поля.
+
+```cs
+
+const int CenterXY = 0, ;
+
+```
+
 ### continue
 
 ### decimal
