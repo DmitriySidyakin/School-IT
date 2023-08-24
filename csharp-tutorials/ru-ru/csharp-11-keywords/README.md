@@ -286,6 +286,21 @@ catch (OverflowException e)
 
 ### class
 
+Ключевое слово предназначено для объявления класса.
+
+```cs
+
+class Circle
+{
+	private int _r;
+
+	public Circle(int radius) => _r = radius;
+
+	public double GetArea() => Math.PI * _r * _r;
+}
+
+```
+
 ### const
 
 ### continue
