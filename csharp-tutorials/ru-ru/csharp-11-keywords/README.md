@@ -197,6 +197,18 @@ E as T == E is T ? (T)(E) : (T)null
 
 ### bool
 
+Ключевое слово для определения булевой переменной. Псевдоним для структуры System.Boolean.
+
+Значение по умолчанию для типа bool: false.
+
+```cs
+
+bool _checked = true;
+
+Console.WriteLine(_checked ? "Проверено" : "Не проверено");
+
+```
+
 ### break
 
 ### byte
