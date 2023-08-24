@@ -368,9 +368,9 @@ C\# 11 поддерживает платформа .NET 7.
 
 ### orderby
 
-### partial (тип)
-
 ### partial (метод)
+
+### partial (тип)
 
 ### record
 
