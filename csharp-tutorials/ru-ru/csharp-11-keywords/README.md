@@ -279,7 +279,7 @@ try
 }
 catch (OverflowException e)
 {
-    Console.WriteLine(e.Message);  // output: Arithmetic operation resulted in an overflow.
+    Console.WriteLine(e.Message);
 }
 
 ```
