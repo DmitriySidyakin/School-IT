@@ -317,6 +317,8 @@ const int CenterXY = 0;
 
 ### decimal
 
+Тип данных с плавающей запятой, самый большой. Занимает 16 байт.
+
 ### default
 
 ### delegate
