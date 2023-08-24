@@ -160,6 +160,23 @@ C\# 11 поддерживает платформа .NET 7.
 
 Класс помеченный ключевым словом *abstract* имеет не полную реализацию. Элементы класса помеченные этим словом, означают, что они должны быть реализованы в наследнике. Нельзя создавать экземпляры абстрактного класса.
 
+```cs
+
+    abstract class Shape
+    {
+        public abstract double GetArea();
+    }
+
+    class Circle : Shape
+    {
+        private int _r;
+
+        public Circle(int radius) => _r = radius;
+
+        public override double GetArea() => Math.PI * _r * _r;
+    }
+	
+```
 
 ### as
 
