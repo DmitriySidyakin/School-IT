@@ -119,7 +119,7 @@ C\# 11 поддерживает платформа .NET 7.
 [into](#into)
 [join](#join)
 [let](#let)
-[managed (соглашение вызова указателя функции)](#managed-соглашение-вызова-указателя-функции)
+[managed (соглашение вызова указателя функции)](#managed--соглашение-вызова-указателя-функции-)
 [nameof](#nameof)
 [nint](#nint)
 [not](#not)
@@ -128,8 +128,8 @@ C\# 11 поддерживает платформа .NET 7.
 [on](#on)
 [or](#or)
 [orderby](#orderby)
-[partial (метод)](#partial-метод)
-[partial (тип)](#partial-тип)
+[partial (метод)](#partial--метод-)
+[partial (тип)](#partial--тип-)
 [record](#record)
 [remove](#remove)
 [required](#required)
@@ -309,3 +309,95 @@ C\# 11 поддерживает платформа .NET 7.
 ## Контекстные ключевые слова. Описание и примеры
 
 [В написании...]
+
+### add
+
+### and
+
+### alias
+
+### ascending
+
+### args
+
+### async
+
+### await
+
+### by
+
+### descending
+
+### dynamic
+
+### equals
+
+### file
+
+### from
+
+### get
+
+### global
+
+### group
+
+### init
+
+### into
+
+### join
+
+### let
+
+### managed (соглашение вызова указателя функции)
+
+### nameof
+
+### nint
+
+### not
+
+### notnull
+
+### nuint
+
+### on
+
+### or
+
+### orderby
+
+### partial (тип)
+
+### partial (метод)
+
+### record
+
+### remove
+
+### required
+
+### scoped
+
+### select
+
+### set
+
+### unmanaged (соглашение вызова указателя функции)
+
+### unmanaged (ограниечение обобщённого типа)
+
+### value
+
+### var
+
+### when
+
+### where (ограниечение обобщённого типа)
+
+### where (выражение запроса)
+
+### with
+
+### yield 
