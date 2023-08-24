@@ -211,6 +211,21 @@ Console.WriteLine(_checked ? "Проверено" : "Не проверено");
 
 ### break
 
+- оператор используется для преостановки циклов (for, foreach, while или do);
+- оператор используется для завершения элемента в цикле switch.
+
+Пример в цикле foreach:
+
+```cs
+
+foreach(var e in Elems)
+{
+	if(e.IsFinal)
+		break;
+}
+
+```
+
 ### byte
 
 ### case
