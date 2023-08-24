@@ -257,6 +257,33 @@ catch (Exception e)
 
 ### checked
 
+Оператор для проверки переполнения арифметических операций и операций преобразования.
+
+Если в этом опереаторе происходит переполнение арифметической операции, то выдаётся исключение OverflowException
+
+```cs
+
+uint a = uint.MaxValue;
+
+unchecked
+{
+    Console.WriteLine(a + 5);  // output: 4
+}
+
+try
+{
+    checked
+    {
+        Console.WriteLine(a + 3);
+    }
+}
+catch (OverflowException e)
+{
+    Console.WriteLine(e.Message);  // output: Arithmetic operation resulted in an overflow.
+}
+
+```
+
 ### class
 
 ### const
