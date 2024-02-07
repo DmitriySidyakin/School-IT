@@ -83,4 +83,4 @@
 
 (в процессе написания)
 
-© Сидякин Д. И., 2019-2023 The site is live at [https://dmitriysidyakin.github.io/School-IT/](https://dmitriysidyakin.github.io/School-IT/)
+© Сидякин Д. И., 2019-2024 The site is live at [https://dmitriysidyakin.github.io/School-IT/](https://dmitriysidyakin.github.io/School-IT/)
