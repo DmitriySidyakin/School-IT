@@ -1,5 +1,6 @@
 
 
-h1 {
+h1#logo {
 	color: pink;
+    padding-left: 36px;
 }
